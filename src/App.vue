@@ -116,6 +116,7 @@ function calculateVF({ level, score, grade, lamp }) {
 }
 
 async function loadData() {
+  skippedCount = 0
   error.value = ""
   best50.value = []
   totalVF.value = 0

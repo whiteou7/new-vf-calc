@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base: '/new-vf-calc/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
