@@ -1,76 +1,126 @@
 <template>
-  <div class="container">
-    <h1>SDVX (New) B50 Calculator</h1>
+  <div class="app">
+    <div class="container">
+      <header class="header">
+        <h1 class="title">SDVX Nabla B50 Calculator</h1>
+      </header>
 
-    <div class="input-row">
-      <input
-        v-model="userId"
-        placeholder="Enter Tachi Username"
-      />
-      <button @click="loadData" :disabled="loading || !mdbReady">
-        {{ loading ? "Loading..." : !mdbReady ? "Loading database..." : "Calculate" }}
-      </button>
-      <span class="or">or</span>
-      <input
-        ref="dbFileInput"
-        type="file"
-        accept=".db,application/x-sqlite3"
-        style="display: none"
-        @change="onDbFileSelected"
-      />
-      <button type="button" :disabled="loading || !mdbReady" @click="$refs.dbFileInput?.click()">
-        Upload your maps.db
-      </button>
-    </div>
+      <div class="input-card">
+        <div class="input-row">
+          <input
+            v-model="userId"
+            placeholder="Enter Tachi Username"
+            class="input"
+          />
+          <button
+            class="btn btn-primary"
+            @click="loadData"
+            :disabled="loading || !mdbReady"
+          >
+            {{ loading ? "Loading..." : !mdbReady ? "Loading database..." : "Calculate" }}
+          </button>
+          <span class="or">or</span>
+          <input
+            ref="dbFileInput"
+            type="file"
+            accept=".db,application/x-sqlite3"
+            class="file-input"
+            @change="onDbFileSelected"
+          />
+          <button
+            type="button"
+            class="btn btn-secondary"
+            :disabled="loading || !mdbReady"
+            @click="$refs.dbFileInput?.click()"
+          >
+            Upload maps.db
+          </button>
+        </div>
+      </div>
 
-    <div v-if="playerSelect.visible" class="player-select">
-      <p>More than one player in database. Choose a player:</p>
-      <select v-model="playerSelect.selected" class="player-select-input">
-        <option value="" disabled>Select player</option>
-        <option
-          v-for="name in playerSelect.players"
-          :key="name ?? '__null__'"
-          :value="name"
-        >
-          {{ name ?? "(no user)" }}
-        </option>
-      </select>
-      <button @click="confirmPlayerAndCalculate" :disabled="!playerSelect.selected">
-        Calculate VF
-      </button>
-    </div>
+      <div v-if="playerSelect.visible" class="player-select card">
+        <p class="player-select-label">More than one player in database. Choose a player:</p>
+        <div class="player-select-row">
+          <select v-model="playerSelect.selected" class="select">
+            <option value="" disabled>Select player</option>
+            <option
+              v-for="name in playerSelect.players"
+              :key="name ?? '__null__'"
+              :value="name"
+            >
+              {{ name ?? "(no user)" }}
+            </option>
+          </select>
+          <button
+            class="btn btn-primary"
+            @click="confirmPlayerAndCalculate"
+            :disabled="!playerSelect.selected"
+          >
+            Calculate VF
+          </button>
+        </div>
+      </div>
 
-    <div v-if="error" class="error">{{ error }}</div>
+      <div v-if="error" class="error card">{{ error }}</div>
 
-    <div v-if="best50.length">
-      <h2>New VF: {{ totalVF.toFixed(3) }}</h2>
+      <section v-if="best50.length" class="results">
+        <div class="results-header card">
+          <h2 class="vf-display">New VF: <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
+        </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Song</th>
-            <th>Diff</th>
-            <th>Level</th>
-            <th>Score</th>
-            <th>Grade</th>
-            <th>Clear</th>
-            <th>VF</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(row, i) in best50" :key="row.chartID ?? row.chart_hash ?? i">
-            <td>{{ i + 1 }}</td>
-            <td>{{ row.title }}</td>
-            <td>{{ row.diff.toUpperCase() }}</td>
-            <td>{{ row.level }}</td>
-            <td>{{ row.score }}</td>
-            <td>{{ row.grade }}</td>
-            <td>{{ row.lamp }}</td>
-            <td>{{ row.vf.toFixed(3) }}</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="table-card card">
+          <table class="b50-table">
+            <thead>
+              <tr>
+                <th class="col-rank">#</th>
+                <th class="col-song">Song</th>
+                <th class="col-diff">Diff</th>
+                <th class="col-level">Level</th>
+                <th class="col-score">Score</th>
+                <th class="col-grade">Grade</th>
+                <th class="col-clear">Clear</th>
+                <th class="col-vf">VF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(row, i) in best50"
+                :key="row.chartID ?? row.chart_hash ?? i"
+                class="row"
+              >
+                <td class="col-rank">{{ i + 1 }}</td>
+                <td class="col-song">
+                  <div class="song-cell">
+                    <div class="jacket-wrap">
+                      <img
+                        v-if="row.songId && !jacketFailed(row.songId)"
+                        :src="jacketUrl(row.songId)"
+                        :alt="row.title"
+                        class="jacket"
+                        loading="lazy"
+                        @error="onJacketError"
+                      />
+                      <div
+                        v-show="!row.songId || jacketFailed(row.songId)"
+                        class="jacket jacket-placeholder"
+                      >
+                        <span class="jacket-placeholder-icon">♪</span>
+                      </div>
+                    </div>
+                    <span class="song-title">{{ row.title }}</span>
+                  </div>
+                </td>
+                <td class="col-diff"><span :class="['diff-badge', 'diff-' + (row.diff || '').toLowerCase()]">{{ (row.diff || '').toUpperCase() }}</span></td>
+                <td class="col-level">{{ row.level }}</td>
+                <td class="col-score">{{ formatScore(row.score) }}</td>
+                <td class="col-grade"><span :class="['grade-badge', 'grade-' + gradeClass(row.grade)]">{{ row.grade }}</span></td>
+                <td class="col-clear lamp-cell">{{ row.lamp }}</td>
+                <td class="col-vf"><strong>{{ row.vf.toFixed(3) }}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -97,6 +147,38 @@ const playerSelect = ref({
   selected: "",
   dbBuffer: null
 })
+
+const failedJackets = ref(new Set())
+const JACKET_BASE = "https://sdvx.dev/api/cover"
+function jacketUrl(songId) {
+  if (!songId) return ""
+  return `${JACKET_BASE}/${songId}_novice.webp`
+}
+
+function onJacketError(e) {
+  const img = e.target
+  const src = img?.src
+  if (src) {
+    const m = src.match(/\/([^/]+)\/NOV\.png$/)
+    if (m?.[1]) failedJackets.value.add(m[1])
+    failedJackets.value = new Set(failedJackets.value)
+  }
+  img?.style?.setProperty("display", "none")
+}
+
+function jacketFailed(songId) {
+  return songId && failedJackets.value.has(String(songId))
+}
+
+function formatScore(score) {
+  const n = Number(score)
+  if (n >= 10_000_000) return "10,000,000"
+  return n.toLocaleString()
+}
+
+function gradeClass(grade) {
+  return (grade || "").toLowerCase().replace("+", "plus")
+}
 
 function parseMusicDbXml(xmlText) {
   const parser = new DOMParser()
@@ -339,6 +421,7 @@ async function onDbFileSelected(ev) {
   error.value = ""
   best50.value = []
   totalVF.value = 0
+  failedJackets.value = new Set()
   loading.value = true
   try {
     const buffer = await file.arrayBuffer()
@@ -405,6 +488,7 @@ function confirmPlayerAndCalculate() {
   error.value = ""
   best50.value = []
   totalVF.value = 0
+  failedJackets.value = new Set()
   ;(async () => {
     try {
       const SQL = await initSqlJs({ locateFile: (f) => import.meta.env.BASE_URL + f })
@@ -520,6 +604,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
 
     rows.push({
       chart_hash: chartHash,
+      songId: mdbSong.mid,
       title: mdbSong.title,
       diff,
       level,
@@ -543,6 +628,7 @@ async function loadData() {
   error.value = ""
   best50.value = []
   totalVF.value = 0
+  failedJackets.value = new Set()
 
   if (!userId.value) {
     error.value = "User ID required"
@@ -586,6 +672,7 @@ async function loadData() {
 
       rows.push({
         chartID: pb.chartID,
+        songId: chart.data?.inGameID ?? chart.data?.songID ?? null,
         title: mdbSong.title,
         diff: chart.difficulty,
         level,
@@ -611,62 +698,348 @@ async function loadData() {
 </script>
 
 <style scoped>
+.app {
+  min-height: 100vh;
+  background: linear-gradient(165deg, #0d0e14 0%, #15172a 35%, #1a1b2e 70%, #0f1117 100%);
+  color: #e2e4eb;
+  padding: 2rem 1rem 4rem;
+}
+
 .container {
-  margin: auto;
-  padding: 20px;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0; /* allow flex child to shrink so table scroll works on mobile */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.25rem 0;
+  color: #fff;
+}
+
+.title .accent {
+  background: linear-gradient(135deg, #00d4aa 0%, #00b4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8b8fa8;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.input-card {
+  margin-bottom: 1.25rem;
 }
 
 .input-row {
   display: flex;
-  gap: 10px;
+  gap: 0.75rem;
   align-items: center;
-  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
+.file-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input {
+  padding: 0.6rem 1rem;
+  width: 200px;
+  max-width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #e2e4eb;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input::placeholder {
+  color: #6b7089;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #00b4ff;
+  box-shadow: 0 0 0 3px rgba(0, 180, 255, 0.15);
+}
+
 .or {
-  color: #666;
+  color: #6b7089;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
-.player-select {
-  margin-bottom: 16px;
-  padding: 12px;
-  background: #f5f5f5;
+.btn {
+  padding: 0.6rem 1.1rem;
+  border: none;
   border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.2s, box-shadow 0.2s;
 }
 
-.player-select p {
-  margin: 0 0 8px 0;
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.player-select-input {
-  margin-right: 8px;
-  padding: 6px 8px;
+.btn:not(:disabled):hover {
+  transform: translateY(-1px);
 }
 
-input {
-  padding: 6px;
-  width: 200px;
+.btn-primary {
+  background: linear-gradient(135deg, #00b4ff 0%, #0088cc 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 180, 255, 0.35);
 }
 
-button {
-  padding: 6px 12px;
+.btn-primary:not(:disabled):hover {
+  box-shadow: 0 6px 20px rgba(0, 180, 255, 0.45);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e4eb;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 6px;
-  text-align: center;
+.btn-secondary:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.player-select {
+  margin-bottom: 1.25rem;
+}
+
+.player-select-label {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+  color: #b4b8c8;
+}
+
+.player-select-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e2e4eb;
+  font-size: 0.9rem;
+  min-width: 160px;
 }
 
 .error {
-  color: red;
-  margin-bottom: 10px;
+  margin-bottom: 1.25rem;
+  color: #ff6b7a;
+  border-color: rgba(255, 107, 122, 0.25);
+  background: rgba(255, 107, 122, 0.08);
 }
+
+.results {
+  margin-top: 1.5rem;
+  flex: 1;
+  width: 100%;
+  min-width: 0; /* allow shrink so table-card doesn't overflow on mobile */
+}
+
+.results-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.vf-display {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.vf-value {
+  background: linear-gradient(135deg, #00d4aa 0%, #00b4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5rem;
+}
+
+.table-card {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
+
+.b50-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  font-size: 0.9rem;
+}
+
+.b50-table th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: #8b8fa8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.b50-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: middle;
+}
+
+.b50-table .row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.col-rank {
+  width: 2.5rem;
+  text-align: center;
+  color: #6b7089;
+  font-weight: 600;
+}
+
+.col-song {
+  min-width: 200px;
+}
+
+.song-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.jacket-wrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.jacket {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.jacket-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #1e2030 0%, #252840 100%);
+  color: #4a4e6a;
+  font-size: 1.25rem;
+}
+
+.jacket-placeholder-icon {
+  opacity: 0.7;
+}
+
+.song-title {
+  font-weight: 500;
+  color: #e2e4eb;
+  line-height: 1.3;
+}
+
+.col-diff,
+.col-level,
+.col-score,
+.col-grade,
+.col-vf {
+  text-align: center;
+  color: white;
+}
+
+.col-clear {
+  font-size: 0.8rem;
+  color: #b4b8c8;
+  max-width: 140px;
+}
+
+.diff-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.diff-nov { background: rgba(100, 180, 100, 0.25); color: #7dd67d; }
+.diff-adv { background: rgba(255, 200, 80, 0.25); color: #ffd066; }
+.diff-exh { background: rgba(255, 100, 100, 0.25); color: #ff8888; }
+.diff-mxm,
+.diff-inf,
+.diff-grv,
+.diff-hvn,
+.diff-vvd,
+.diff-xcd { background: rgba(180, 100, 255, 0.25); color: #c88cff; }
+.diff-ult { background: rgba(255, 80, 120, 0.25); color: #ff88aa; }
+
+.grade-badge {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.grade-puc    { background: linear-gradient(135deg, rgba(255, 215, 0, 0.35), rgba(255, 180, 0, 0.25)); color: #ffd700; }
+.grade-s      { background: rgba(255, 200, 80, 0.25); color: #ffd066; }
+.grade-aaaplus,
+.grade-aaa    { background: rgba(100, 200, 255, 0.2); color: #88ccff; }
+.grade-aaplus,
+.grade-aa     { background: rgba(120, 180, 120, 0.25); color: #88dd88; }
+.grade-aplus,
+.grade-a      { background: rgba(160, 160, 180, 0.25); color: #b8b8d0; }
+.grade-b      { background: rgba(140, 120, 100, 0.25); color: #c4a878; }
+.grade-c,
+.grade-d      { background: rgba(100, 100, 100, 0.25); color: #9090a0; }
 </style>
