@@ -204,21 +204,27 @@ function findFuzzyMatch(title, artist, map) {
   const normTitle = normalizeTitleArtist(title)
   const normArtist = normalizeTitleArtist(artist)
 
-  const TITLE_THRESHOLD = 0.75
-  const ARTIST_THRESHOLD = 0.8
+  const THRESHOLD = 0.75
+
+  let bestMatch = null
+  let bestScore = 0
 
   for (const entry of map.values()) {
     const t = normalizeTitleArtist(entry.title)
     const a = normalizeTitleArtist(entry.artist)
 
-    if (
-      isCloseMatch(normTitle + " " + normArtist, t + " " + a, TITLE_THRESHOLD)
-    ) {
-      return entry
+    const score = similarity(
+      normTitle + " " + normArtist,
+      t + " " + a
+    )
+
+    if (score > bestScore) {
+      bestScore = score
+      bestMatch = entry
     }
   }
 
-  return null
+  return bestScore >= THRESHOLD ? bestMatch : null
 }
 
 const mdbByTitleArtist = computed(() => {
