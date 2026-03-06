@@ -65,7 +65,10 @@
 
       <section v-if="best50.length" class="results">
         <div class="results-header card">
-          <h2 class="vf-display">New VF: <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
+          <h2 class="vf-display">Nabla VF: <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
+          <button type="button" class="btn btn-secondary export-csv-btn" @click="exportToCsv">
+            Export to CSV
+          </button>
         </div>
 
         <div class="table-card card">
@@ -178,6 +181,42 @@ function formatScore(score) {
 
 function gradeClass(grade) {
   return (grade || "").toLowerCase().replace("+", "plus")
+}
+
+function escapeCsvField(val) {
+  const s = String(val ?? "")
+  if (s.includes(",") || s.includes('"') || s.includes("\n")) {
+    return '"' + s.replace(/"/g, '""') + '"'
+  }
+  return s
+}
+
+function exportToCsv() {
+  const headers = ["#", "Song", "Diff", "Level", "Score", "Grade", "Clear", "VF"]
+  const lines = [headers.map(escapeCsvField).join(",")]
+  for (let i = 0; i < best50.value.length; i++) {
+    const row = best50.value[i]
+    lines.push(
+      [
+        i + 1,
+        row.title ?? "",
+        (row.diff ?? "").toUpperCase(),
+        row.level ?? "",
+        formatScore(row.score),
+        row.grade ?? "",
+        row.lamp ?? "",
+        row.vf != null ? row.vf.toFixed(3) : ""
+      ].map(escapeCsvField).join(",")
+    )
+  }
+  const csv = lines.join("\n")
+  const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8" })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = "b50-export.csv"
+  a.click()
+  URL.revokeObjectURL(url)
 }
 
 function parseMusicDbXml(xmlText) {
@@ -334,15 +373,16 @@ function gradeFromScore(score) {
   return "D"
 }
 
-function lampFromScore(score, miss, gaugeType) {
+function getLamp(score, miss, gaugeType, gauge) {
   const s = Number(score) || 0
   const noMiss = miss == null || Number(miss) === 0
   const gt = Number(gaugeType) ?? 0
+  const g = Number(gauge) ?? 0
 
   if (s >= 10_000_000 && noMiss) return "PERFECT ULTIMATE CHAIN"
   if (noMiss) return "ULTIMATE CHAIN"
-  if (gt === 1) return "EXCESSIVE CLEAR" // HARD clear
-  if (gt === 0) return "CLEAR" // NORMAL clear
+  if (gt === 1 && g > 0) return "EXCESSIVE CLEAR" // HARD clear
+  if (gt === 0 && g >= 70) return "CLEAR" // NORMAL clear
   return "FAILED" // PLAYED
 }
 
@@ -537,7 +577,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
       : "s.user_name = ?"
 
   const bestScoresQuery = `
-    SELECT s.chart_hash, s.score, s.miss, s.gauge_type
+    SELECT s.chart_hash, s.score, s.miss, s.gauge_type, s.gauge
     FROM ${scoresTable} s
     INNER JOIN ${chartsTable} c ON c.hash = s.chart_hash AND (${pathFilter})
     WHERE ${userCondition}
@@ -561,7 +601,8 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
       chart_hash: h,
       score: Number(row.score) || 0,
       miss: row.miss,
-      gauge_type: row.gauge_type
+      gauge_type: row.gauge_type,
+      gauge: row.gauge
     })
   }
 
@@ -591,7 +632,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
     let bestLamp = "FAILED"
     let bestLampCoeff = clearCoeff["FAILED"]
     for (const p of plays) {
-      const lamp = lampFromScore(p.score, p.miss, p.gauge_type)
+      const lamp = getLamp(p.score, p.miss, p.gauge_type, p.gauge)
       const c = clearCoeff[lamp] ?? 0.5
       if (c > bestLampCoeff) {
         bestLampCoeff = c
@@ -878,7 +919,15 @@ async function loadData() {
 
 .results-header {
   margin-bottom: 1rem;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.export-csv-btn {
+  flex-shrink: 0;
 }
 
 .vf-display {
