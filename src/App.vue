@@ -382,7 +382,7 @@ function getLamp(score, miss, gaugeType, gauge) {
   if (s >= 10_000_000 && noMiss) return "PERFECT ULTIMATE CHAIN"
   if (noMiss) return "ULTIMATE CHAIN"
   if (gt === 1 && g > 0) return "EXCESSIVE CLEAR" // HARD clear
-  if (gt === 0 && g >= 70) return "CLEAR" // NORMAL clear
+  if (gt === 0 && g >= .70) return "CLEAR" // NORMAL clear
   return "FAILED" // PLAYED
 }
 
@@ -631,6 +631,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
     const bestScore = Math.max(...plays.map((p) => p.score))
     let bestLamp = "FAILED"
     let bestLampCoeff = clearCoeff["FAILED"]
+
     for (const p of plays) {
       const lamp = getLamp(p.score, p.miss, p.gauge_type, p.gauge)
       const c = clearCoeff[lamp] ?? 0.5
