@@ -1063,16 +1063,55 @@ async function loadData() {
   letter-spacing: 0.03em;
 }
 
-.diff-nov { background: rgba(100, 180, 100, 0.25); color: #7dd67d; }
-.diff-adv { background: rgba(255, 200, 80, 0.25); color: #ffd066; }
-.diff-exh { background: rgba(255, 100, 100, 0.25); color: #ff8888; }
-.diff-mxm,
-.diff-inf,
-.diff-grv,
-.diff-hvn,
-.diff-vvd,
-.diff-xcd { background: rgba(180, 100, 255, 0.25); color: #c88cff; }
-.diff-ult { background: rgba(255, 80, 120, 0.25); color: #ff88aa; }
+.diff-nov {
+  background: rgba(255, 0, 255, 0.25);
+  color: #ff66ff;
+}
+
+.diff-adv {
+  background: rgba(255, 200, 80, 0.25);
+  color: #ffd066;
+}
+
+.diff-exh {
+  background: rgba(255, 100, 100, 0.25);
+  color: #ff8888;
+}
+
+.diff-mxm {
+  background: rgba(160, 160, 160, 0.25);
+  color: #d0d0d0;
+}
+
+.diff-inf {
+  background: rgba(180, 100, 255, 0.25);
+  color: #c88cff;
+}
+
+.diff-grv {
+  background: rgba(255, 140, 60, 0.25);
+  color: #ffae66;
+}
+
+.diff-hvn {
+  background: rgba(80, 220, 255, 0.25);
+  color: #88e8ff;
+}
+
+.diff-vvd {
+  background: rgba(255, 120, 180, 0.25);
+  color: #ff9ac8;
+}
+
+.diff-xcd {
+  background: rgba(80, 140, 255, 0.25);
+  color: #88b8ff;
+}
+
+.diff-ult {
+  background: rgba(255, 240, 120, 0.25);
+  color: #fff099;
+}
 
 .grade-badge {
   display: inline-block;
