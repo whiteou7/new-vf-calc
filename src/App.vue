@@ -416,6 +416,7 @@ function getLevel(chart, chartMeta) {
     nov: 0,
     adv: 1,
     exh: 2,
+    inf: 3,
     grv: 3,
     hvn: 3,
     vvd: 3,
