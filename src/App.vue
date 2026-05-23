@@ -682,7 +682,7 @@ async function loadData() {
 
   try {
     const res = await fetch(
-      `https://kamai.tachi.ac/api/v1/users/${userId.value}/games/sdvx/Single/pbs/all`
+      `https://kamai.tachi.ac/api/v1/users/${userId.value}/games/sdvx/pbs/all`
     )
     const { body, description } = await res.json()
     msg = description
