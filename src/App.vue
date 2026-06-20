@@ -69,6 +69,13 @@
           <button type="button" class="btn btn-secondary export-csv-btn" @click="exportToCsv">
             Export to CSV
           </button>
+          <button type="button" class="btn btn-secondary export-csv-btn" @click="generateImage" :disabled="generatingImage">
+            {{ generatingImage ? "Generating…" : "Generate Image" }}
+          </button>
+        </div>
+
+        <div v-if="generatedImageUrl" style="padding-bottom: 16px;">
+          <img :src="generatedImageUrl" alt="B50 result card" class="generated-image" />
         </div>
 
         <div class="table-card card">
@@ -126,6 +133,7 @@
       </section>
     </div>
   </div>
+
 </template>
 
 <script setup>
@@ -150,6 +158,10 @@ const playerSelect = ref({
   selected: "",
   dbBuffer: null
 })
+
+const generatingImage = ref(false)
+const generatedImageUrl = ref("")
+const activePlayerName = ref("")
 
 const failedJackets = ref(new Set())
 const JACKET_BASE = "https://sdvx.dev/api/cover"
@@ -217,6 +229,45 @@ function exportToCsv() {
   a.download = "b50-export.csv"
   a.click()
   URL.revokeObjectURL(url)
+}
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"
+
+async function generateImage() {
+  generatingImage.value = true
+  try {
+    const payload = {
+      username: activePlayerName.value || "Player",
+      vf: totalVF.value,
+      scores: best50.value.map((r) => ({
+        title: r.title,
+        diff: r.diff,
+        level: r.level,
+        score: r.score,
+        grade: r.grade,
+        lamp: r.lamp,
+        vf: r.vf,
+        songId: r.songId,
+        timeAchieved: r.timeAchieved ?? null,
+      })),
+    }
+    const res = await fetch(`${BACKEND_URL}/api/generate-b50`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: res.statusText }))
+      throw new Error(err.error || res.statusText)
+    }
+    const blob = await res.blob()
+    if (generatedImageUrl.value) URL.revokeObjectURL(generatedImageUrl.value)
+    generatedImageUrl.value = URL.createObjectURL(blob)
+  } catch (e) {
+    error.value = "Image generation failed: " + (e?.message || String(e))
+  } finally {
+    generatingImage.value = false
+  }
 }
 
 function parseMusicDbXml(xmlText) {
@@ -502,6 +553,7 @@ async function onDbFileSelected(ev) {
     }
 
     if (players.length === 1) {
+      activePlayerName.value = players[0] ?? ""
       await calculateFromDb(db, players[0], scoresTable, chartsTable)
     } else {
       playerSelect.value = {
@@ -524,6 +576,7 @@ async function onDbFileSelected(ev) {
 function confirmPlayerAndCalculate() {
   const { selected, dbBuffer, scoresTable, chartsTable } = playerSelect.value
   if (!selected || !dbBuffer) return
+  activePlayerName.value = selected
   playerSelect.value = { visible: false, players: [], selected: "", dbBuffer: null }
   loading.value = true
   error.value = ""
@@ -578,7 +631,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
       : "s.user_name = ?"
 
   const bestScoresQuery = `
-    SELECT s.chart_hash, s.score, s.miss, s.gauge_type, s.gauge
+    SELECT s.chart_hash, s.score, s.miss, s.gauge_type, s.gauge, s.timestamp
     FROM ${scoresTable} s
     INNER JOIN ${chartsTable} c ON c.hash = s.chart_hash AND (${pathFilter})
     WHERE ${userCondition}
@@ -603,7 +656,8 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
       score: Number(row.score) || 0,
       miss: row.miss,
       gauge_type: row.gauge_type,
-      gauge: row.gauge
+      gauge: row.gauge,
+      timestamp: row.timestamp ?? null,
     })
   }
 
@@ -629,7 +683,10 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
     const diff = (chart.diff_shortname || "NOV").toUpperCase()
 
     // PB = best score + best lamp (from any play on this chart)
-    const bestScore = Math.max(...plays.map((p) => p.score))
+    const bestScorePlay = plays.reduce((a, b) => b.score > a.score ? b : a, plays[0])
+    const bestScore = bestScorePlay.score
+    // timestamp is stored in Unix seconds in maps.db; convert to ms for consistency
+    const bestTimestamp = bestScorePlay.timestamp ? bestScorePlay.timestamp * 1000 : null
     let bestLamp = "FAILED"
     let bestLampCoeff = clearCoeff["FAILED"]
 
@@ -648,13 +705,14 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
     rows.push({
       chart_hash: chartHash,
       songId: mdbSong.mid,
-      title: mdbSong.title,
+      title: chart.title,
       diff,
       level,
       score: bestScore,
       grade,
       lamp: bestLamp,
-      vf
+      vf,
+      timeAchieved: bestTimestamp,
     })
   }
 
@@ -678,6 +736,7 @@ async function loadData() {
     return
   }
 
+  activePlayerName.value = userId.value
   loading.value = true
 
   try {
@@ -716,13 +775,14 @@ async function loadData() {
       rows.push({
         chartID: pb.chartID,
         songId: chart.data?.inGameID ?? chart.data?.songID ?? null,
-        title: mdbSong.title,
+        title: chart.song?.title ?? mdbSong.title,
         diff: chart.difficulty,
         level,
         score: pb.scoreData.score,
         grade: pb.scoreData.grade,
         lamp: pb.scoreData.lamp,
-        vf
+        vf,
+        timeAchieved: pb.timeAchieved ?? null,
       })
     }
 
@@ -947,6 +1007,17 @@ async function loadData() {
   font-size: 1.5rem;
 }
 
+.generated-image-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.generated-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .table-card {
   width: 100%;
   max-width: 100%;
@@ -1004,7 +1075,7 @@ async function loadData() {
 .jacket-wrap {
   flex-shrink: 0;
   width: 48px;
-  height: 48px;
+  aspect-ratio: 1 / 1;
   border-radius: 6px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.3);
