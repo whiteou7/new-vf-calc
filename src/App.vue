@@ -70,7 +70,7 @@
             Export to CSV
           </button>
           <button type="button" class="btn btn-secondary export-csv-btn" @click="generateImage" :disabled="generatingImage">
-            {{ generatingImage ? "Generating…" : "Generate Image" }}
+            {{ generatingImage ? "Generating… might take a while" : "Generate Image" }}
           </button>
         </div>
 
@@ -231,7 +231,7 @@ function exportToCsv() {
   URL.revokeObjectURL(url)
 }
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"
+const BACKEND_URL = "https://new-vf-calc.onrender.com"
 
 async function generateImage() {
   generatingImage.value = true
@@ -514,6 +514,7 @@ async function onDbFileSelected(ev) {
   best50.value = []
   totalVF.value = 0
   failedJackets.value = new Set()
+  generatedImageUrl.value = ""
   loading.value = true
   try {
     const buffer = await file.arrayBuffer()
@@ -583,6 +584,7 @@ function confirmPlayerAndCalculate() {
   best50.value = []
   totalVF.value = 0
   failedJackets.value = new Set()
+  generatedImageUrl.value = ""
   ;(async () => {
     try {
       const SQL = await initSqlJs({ locateFile: (f) => import.meta.env.BASE_URL + f })
@@ -730,6 +732,7 @@ async function loadData() {
   best50.value = []
   totalVF.value = 0
   failedJackets.value = new Set()
+  generatedImageUrl.value = ""
 
   if (!userId.value) {
     error.value = "User ID required"
