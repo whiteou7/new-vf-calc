@@ -1,8 +1,10 @@
 """Flask backend – exposes POST /api/generate-b50 → PNG image."""
 
+import threading
+
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-from generate import generate_b50_image
+from generate import generate_b50_image, prefetch_jackets
 from io import BytesIO
 
 app = Flask(__name__)
@@ -25,5 +27,6 @@ def generate():
 
 
 if __name__ == "__main__":
+    threading.Thread(target=prefetch_jackets, kwargs={"start": 1, "end": 3000}, daemon=True).start()
     print("B50 image backend → http://localhost:5000")
     app.run(host="0.0.0.0", port=5000, debug=False)
