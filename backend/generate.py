@@ -141,7 +141,7 @@ def _fetch_jacket(song_id):
     return None
 
 
-def prefetch_jackets(start=1, end=3000, max_workers=16):
+def prefetch_jackets(start=1, end=3000, max_workers=4):
     """Warm the on-disk jacket cache for song ids in [start, end]."""
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
         list(pool.map(_fetch_jacket, range(start, end + 1)))
