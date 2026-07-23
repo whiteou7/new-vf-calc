@@ -10,6 +10,10 @@ from io import BytesIO
 app = Flask(__name__)
 CORS(app)          # allow requests from the Vite dev server
 
+# Runs on import so it also fires under gunicorn (server:app), where
+# __name__ != "__main__" and the block below never executes.
+threading.Thread(target=prefetch_jackets, kwargs={"start": 1, "end": 3000}, daemon=True).start()
+
 
 @app.route("/api/generate-b50", methods=["POST"])
 def generate():
@@ -27,6 +31,5 @@ def generate():
 
 
 if __name__ == "__main__":
-    threading.Thread(target=prefetch_jackets, kwargs={"start": 1, "end": 3000}, daemon=True).start()
     print("B50 image backend → http://localhost:5000")
     app.run(host="0.0.0.0", port=5000, debug=False)

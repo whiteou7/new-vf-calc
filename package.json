@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "cross-env VITE_BACKEND_URL=https://new-vf-calc.onrender.com vite build",
+    "predeploy": "cross-env VITE_BACKEND_URL=https://b50-api.whiteou7.id.vn vite build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

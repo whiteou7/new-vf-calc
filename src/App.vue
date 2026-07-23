@@ -231,7 +231,7 @@ function exportToCsv() {
   URL.revokeObjectURL(url)
 }
 
-const BACKEND_URL = "https://new-vf-calc.onrender.com"
+const BACKEND_URL = "https://b50-api.whiteou7.id.vn"
 
 async function generateImage() {
   generatingImage.value = true
