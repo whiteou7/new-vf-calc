@@ -25,11 +25,26 @@ INFO_MARGIN = 8             # gap between jacket right edge and text
 INFO_X_OFF  = JACKET_PAD + JACKET_SIZE + INFO_MARGIN
 
 # ── Colours ──────────────────────────────────────────────────────────────────
-BG_TOP    = (3, 16, 7)     # near-black green, top-left
-BG_BOTTOM = (11, 63, 18)   # rich, saturated green, bottom-right
 WHITE     = (238, 240, 236)
 GRAY      = (135, 145, 135)
 GOLD      = (242, 242, 242)
+
+# Per-mode colour schemes: "nabla" (current game) vs "exceed" (Exceed Gear, the
+# previous version). Selected at render time via data["mode"].
+COLOR_SCHEMES = {
+    "nabla": {
+        "bg_top":    (3, 16, 7),      # near-black green, top-left
+        "bg_bottom": (11, 63, 18),    # rich, saturated green, bottom-right
+        "card_tint": (190, 255, 200), # soft mint-green card highlight
+        "label":     "NABLA VF TOP 50",
+    },
+    "exceed": {
+        "bg_top":    (12, 13, 15),    # near-black gray, top-left
+        "bg_bottom": (58, 60, 65),    # lighter slate gray, bottom-right
+        "card_tint": (225, 228, 232), # soft cool-white card highlight
+        "label":     "EXCEED GEAR VF TOP 50",
+    },
+}
 
 DIFF_STYLES = {
     # bg = rgba blended onto card avg (16,22,16); text = css color literal
@@ -192,24 +207,23 @@ def _truncate(draw, text, fnt, max_px):
     return text
 
 
-def _background_gradient(width, height):
-    """Diagonal (top-left → bottom-right) green gradient used as the canvas backdrop."""
+def _background_gradient(width, height, bg_top, bg_bottom):
+    """Diagonal (top-left → bottom-right) gradient used as the canvas backdrop."""
     xs = np.linspace(0.0, 1.0, width, dtype=np.float32)
     ys = np.linspace(0.0, 1.0, height, dtype=np.float32)
     t  = (xs[None, :] + ys[:, None]) / 2.0  # 0 at top-left, 1 at bottom-right
 
-    top    = np.array(BG_TOP, dtype=np.float32)
-    bottom = np.array(BG_BOTTOM, dtype=np.float32)
+    top    = np.array(bg_top, dtype=np.float32)
+    bottom = np.array(bg_bottom, dtype=np.float32)
     arr    = top[None, None, :] + (bottom - top)[None, None, :] * t[:, :, None]
     return Image.fromarray(arr.astype(np.uint8), mode="RGB")
 
 
-@functools.lru_cache(maxsize=1)
-def _card_gradient_overlay():
-    """Subtle green-tinted gradient, transparent at top fading in toward the bottom of a card."""
+@functools.lru_cache(maxsize=4)
+def _card_gradient_overlay(tint):
+    """Subtle tinted gradient, transparent at top fading in toward the bottom of a card."""
     start_frac = 0.2
     max_alpha  = 20
-    tint       = (190, 255, 200)  # soft mint-green highlight, blends with the bg gradient
     grad = Image.new("RGBA", (CARD_WIDTH, CARD_HEIGHT), (0, 0, 0, 0))
     gd   = ImageDraw.Draw(grad)
     start_y = int(CARD_HEIGHT * start_frac)
@@ -222,7 +236,7 @@ def _card_gradient_overlay():
 
 # ── Card drawing ─────────────────────────────────────────────────────────────
 
-def _draw_card(img, draw, score, cx, cy, rank, jcache):
+def _draw_card(img, draw, score, cx, cy, rank, jcache, card_tint):
     # Jacket
     sid    = score.get("songId")
     jacket = None
@@ -328,8 +342,8 @@ def _draw_card(img, draw, score, cx, cy, rank, jcache):
             rank_w = 20
         draw.text((right_x - rank_w, small_y + 5), ta, font=font(10), fill=GRAY, anchor="ra")
 
-    # Slight white gradient wash across the bottom of the card
-    overlay = _card_gradient_overlay()
+    # Slight tinted gradient wash across the bottom of the card
+    overlay = _card_gradient_overlay(card_tint)
     img.paste(overlay, (cx, cy), overlay)
 
 
@@ -342,6 +356,7 @@ def generate_b50_image(data: dict) -> Image.Image:
     Expected keys in *data*:
         username   str
         vf         float
+        mode       str  – "nabla" (default) or "exceed" (Exceed Gear), picks the colour scheme
         scores     list[dict]  – up to 50 items, each with:
                        title, diff, level, score, grade, lamp, vf,
                        songId, timeAchieved (ms)
@@ -351,7 +366,10 @@ def generate_b50_image(data: dict) -> Image.Image:
     vf       = float(data.get("vf") or 0)
     now      = datetime.now(timezone.utc)
 
-    img  = _background_gradient(IMAGE_WIDTH, IMAGE_HEIGHT)
+    mode   = (data.get("mode") or "nabla").lower()
+    scheme = COLOR_SCHEMES.get(mode, COLOR_SCHEMES["nabla"])
+
+    img  = _background_gradient(IMAGE_WIDTH, IMAGE_HEIGHT, scheme["bg_top"], scheme["bg_bottom"])
     draw = ImageDraw.Draw(img)
 
     def _slot_xy(col, row):
@@ -362,7 +380,7 @@ def generate_b50_image(data: dict) -> Image.Image:
 
     # ── Metadata block (top-left card slot: col 0, row 0) ────────────────────
     mx, my = _slot_xy(0, 0)
-    draw.text((mx + 8,  my + 4), "NABLA VF TOP 50",          font=font(13),                   fill=(235, 235, 235))
+    draw.text((mx + 8,  my + 4), scheme["label"],            font=font(13),                   fill=(235, 235, 235))
     draw.text((mx + 8, my + 22), username,                    font=best_font(16, username),    fill=WHITE)
     draw.text((mx + 8, my + 45), f"{vf:.3f} VF",              font=font(17),                   fill=(255, 220, 90))
     draw.text((mx + CARD_WIDTH - 8,  my + 4), "whiteou7.github.io/new-vf-calc", font=font(9), fill=GRAY, anchor="ra")
@@ -387,6 +405,7 @@ def generate_b50_image(data: dict) -> Image.Image:
             cx=cx, cy=cy,
             rank=i + 1,
             jcache=jcache,
+            card_tint=scheme["card_tint"],
         )
 
     return img

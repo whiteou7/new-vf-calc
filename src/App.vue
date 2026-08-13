@@ -2,7 +2,7 @@
   <div class="app">
     <div class="container">
       <header class="header">
-        <h1 class="title">SDVX Nabla B50 Calculator</h1>
+        <h1 class="title">SDVX B50 Calculator</h1>
       </header>
 
       <div class="input-card">
@@ -36,6 +36,10 @@
             Upload maps.db
           </button>
         </div>
+        <label class="checkbox-row">
+          <input type="checkbox" v-model="exceedGear" />
+          Calculate Exceed Gear VF
+        </label>
       </div>
 
       <div v-if="playerSelect.visible" class="player-select card">
@@ -65,7 +69,7 @@
 
       <section v-if="best50.length" class="results">
         <div class="results-header card">
-          <h2 class="vf-display">Nabla VF: <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
+          <h2 class="vf-display">{{ exceedGear ? "Exceed Gear VF:" : "Nabla VF:" }} <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
           <button type="button" class="btn btn-secondary export-csv-btn" @click="exportToCsv">
             Export to CSV
           </button>
@@ -149,6 +153,7 @@ const loading = ref(false)
 const error = ref("")
 const best50 = ref([])
 const totalVF = ref(0)
+const exceedGear = ref(false)
 let msg = ""
 let skippedCount = 0
 
@@ -239,6 +244,7 @@ async function generateImage() {
     const payload = {
       username: activePlayerName.value || "Player",
       vf: totalVF.value,
+      mode: exceedGear.value ? "exceed" : "nabla",
       scores: best50.value.map((r) => ({
         title: r.title,
         diff: r.diff,
@@ -460,6 +466,12 @@ const clearCoeff = {
   "FAILED": 0.5
 }
 
+// Exceed Gear (previous game version): same table, but ultimate chain coeff is 1.05
+const clearCoeffExceed = {
+  ...clearCoeff,
+  "ULTIMATE CHAIN": 1.05
+}
+
 function getLevel(chart, chartMeta) {
   if (!chartMeta) return 0
 
@@ -480,12 +492,18 @@ function getLevel(chart, chartMeta) {
   return chartMeta.difficulty[idx] || 0
 }
 
-function calculateVF({ level, score, grade, lamp }) {
+// Exceed Gear only had whole-number chart levels
+function roundLevelForMode(level, exceed) {
+  return exceed ? Math.trunc(level) : level
+}
+
+function calculateVF({ level, score, grade, lamp }, exceed = false) {
   const g = gradeCoeff[grade] ?? 1
-  const c = clearCoeff[lamp] ?? 1
+  const c = (exceed ? clearCoeffExceed : clearCoeff)[lamp] ?? 1
+  const lvl = roundLevelForMode(level, exceed)
 
   const base =
-    level *
+    lvl *
     (score / 10_000_000) *
     g *
     c *
@@ -681,7 +699,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
       continue
     }
 
-    const level = getLevelFromMdb(mdbSong, chart.diff_index)
+    const level = roundLevelForMode(getLevelFromMdb(mdbSong, chart.diff_index), exceedGear.value)
     const diff = (chart.diff_shortname || "NOV").toUpperCase()
 
     // PB = best score + best lamp (from any play on this chart)
@@ -702,7 +720,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
     }
 
     const grade = gradeFromScore(bestScore)
-    const vf = calculateVF({ level, score: bestScore, grade, lamp: bestLamp })
+    const vf = calculateVF({ level, score: bestScore, grade, lamp: bestLamp }, exceedGear.value)
 
     rows.push({
       chart_hash: chartHash,
@@ -766,14 +784,14 @@ async function loadData() {
         continue
       }
 
-      const level = getLevel(chart, mdbSong)
+      const level = roundLevelForMode(getLevel(chart, mdbSong), exceedGear.value)
 
       const vf = calculateVF({
         level,
         score: pb.scoreData.score,
         grade: pb.scoreData.grade,
         lamp: pb.scoreData.lamp
-      })
+      }, exceedGear.value)
 
       rows.push({
         chartID: pb.chartID,
@@ -865,6 +883,24 @@ async function loadData() {
   gap: 0.75rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  color: #a8acc0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #00b4ff;
+  cursor: pointer;
 }
 
 .file-input {
