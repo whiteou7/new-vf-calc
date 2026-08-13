@@ -2,6 +2,7 @@
 
 import os
 import functools
+import numpy as np
 import requests
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance
@@ -10,25 +11,22 @@ from datetime import datetime, timezone
 
 # ── Layout constants ─────────────────────────────────────────────────────────
 NUM_COLS     = 3
-COLUMN_GAP   = 2     # pixels between columns (drawn as a separator line)
-IMAGE_WIDTH  = 1000
-CARD_WIDTH   = (IMAGE_WIDTH - COLUMN_GAP * (NUM_COLS - 1)) // NUM_COLS  # 332 @ 1000px
+GRID_GAP     = 8     # pixels between cards, both directions
+GRID_MARGIN  = 10    # outer margin around the whole card grid
+CARD_WIDTH   = 320
 CARD_HEIGHT  = 72
 NUM_ROWS     = 17    # ceil(50 / 3); row 0 = metadata + cards 49-50, rows 1-16 = cards 1-48
-IMAGE_HEIGHT = NUM_ROWS * CARD_HEIGHT  # 1224
+IMAGE_WIDTH  = GRID_MARGIN * 2 + CARD_WIDTH * NUM_COLS + GRID_GAP * (NUM_COLS - 1)   # 996
+IMAGE_HEIGHT = GRID_MARGIN * 2 + CARD_HEIGHT * NUM_ROWS + GRID_GAP * (NUM_ROWS - 1)  # 1372
 
-JACKET_SIZE = 56
-JACKET_PAD  = 3      # left padding inside card
-INFO_MARGIN = 5      # gap between jacket right edge and text
-INFO_X_OFF  = JACKET_PAD + JACKET_SIZE + INFO_MARGIN  # 60
+JACKET_SIZE = CARD_HEIGHT  # jacket fills the full height of the card
+JACKET_PAD  = 0             # flush against the card's left edge
+INFO_MARGIN = 8             # gap between jacket right edge and text
+INFO_X_OFF  = JACKET_PAD + JACKET_SIZE + INFO_MARGIN
 
 # ── Colours ──────────────────────────────────────────────────────────────────
-BG        = (7, 15, 8)
-CARD_BG   = [
-    (18, 24, 18),
-    (15, 21, 15),
-]
-SEPARATOR = (34, 55, 34)
+BG_TOP    = (3, 16, 7)     # near-black green, top-left
+BG_BOTTOM = (11, 63, 18)   # rich, saturated green, bottom-right
 WHITE     = (238, 240, 236)
 GRAY      = (135, 145, 135)
 GOLD      = (242, 242, 242)
@@ -194,20 +192,37 @@ def _truncate(draw, text, fnt, max_px):
     return text
 
 
+def _background_gradient(width, height):
+    """Diagonal (top-left → bottom-right) green gradient used as the canvas backdrop."""
+    xs = np.linspace(0.0, 1.0, width, dtype=np.float32)
+    ys = np.linspace(0.0, 1.0, height, dtype=np.float32)
+    t  = (xs[None, :] + ys[:, None]) / 2.0  # 0 at top-left, 1 at bottom-right
+
+    top    = np.array(BG_TOP, dtype=np.float32)
+    bottom = np.array(BG_BOTTOM, dtype=np.float32)
+    arr    = top[None, None, :] + (bottom - top)[None, None, :] * t[:, :, None]
+    return Image.fromarray(arr.astype(np.uint8), mode="RGB")
+
+
+@functools.lru_cache(maxsize=1)
+def _card_gradient_overlay():
+    """Subtle green-tinted gradient, transparent at top fading in toward the bottom of a card."""
+    start_frac = 0.2
+    max_alpha  = 20
+    tint       = (190, 255, 200)  # soft mint-green highlight, blends with the bg gradient
+    grad = Image.new("RGBA", (CARD_WIDTH, CARD_HEIGHT), (0, 0, 0, 0))
+    gd   = ImageDraw.Draw(grad)
+    start_y = int(CARD_HEIGHT * start_frac)
+    for y in range(start_y, CARD_HEIGHT):
+        t     = (y - start_y) / max(1, (CARD_HEIGHT - 1 - start_y))
+        alpha = int(max_alpha * t)
+        gd.line([(0, y), (CARD_WIDTH, y)], fill=(*tint, alpha))
+    return grad
+
+
 # ── Card drawing ─────────────────────────────────────────────────────────────
 
-def _draw_card(img, draw, score, cx, cy, row, rank, jcache):
-    # Background
-    draw.rectangle(
-        [cx, cy, cx + CARD_WIDTH - 1, cy + CARD_HEIGHT - 1],
-        fill=CARD_BG[row % 2],
-    )
-    # Row separator
-    draw.line(
-        [(cx, cy + CARD_HEIGHT - 1), (cx + CARD_WIDTH - 1, cy + CARD_HEIGHT - 1)],
-        fill=SEPARATOR,
-    )
-
+def _draw_card(img, draw, score, cx, cy, rank, jcache):
     # Jacket
     sid    = score.get("songId")
     jacket = None
@@ -228,7 +243,7 @@ def _draw_card(img, draw, score, cx, cy, row, rank, jcache):
         draw.rectangle(
             [jx, jy, jx + JACKET_SIZE - 1, jy + JACKET_SIZE - 1],
             outline=(80, 90, 80),
-            width=1,
+            width=2,
         )
     else:
         draw.rectangle([jx, jy, jx + JACKET_SIZE - 1, jy + JACKET_SIZE - 1], fill=(22, 24, 38))
@@ -313,6 +328,10 @@ def _draw_card(img, draw, score, cx, cy, row, rank, jcache):
             rank_w = 20
         draw.text((right_x - rank_w, small_y + 5), ta, font=font(10), fill=GRAY, anchor="ra")
 
+    # Slight white gradient wash across the bottom of the card
+    overlay = _card_gradient_overlay()
+    img.paste(overlay, (cx, cy), overlay)
+
 
 # ── Public entry point ───────────────────────────────────────────────────────
 
@@ -332,17 +351,22 @@ def generate_b50_image(data: dict) -> Image.Image:
     vf       = float(data.get("vf") or 0)
     now      = datetime.now(timezone.utc)
 
-    img  = Image.new("RGB", (IMAGE_WIDTH, IMAGE_HEIGHT), BG)
+    img  = _background_gradient(IMAGE_WIDTH, IMAGE_HEIGHT)
     draw = ImageDraw.Draw(img)
 
+    def _slot_xy(col, row):
+        return (
+            GRID_MARGIN + col * (CARD_WIDTH + GRID_GAP),
+            GRID_MARGIN + row * (CARD_HEIGHT + GRID_GAP),
+        )
+
     # ── Metadata block (top-left card slot: col 0, row 0) ────────────────────
-    draw.rectangle([0, 0, CARD_WIDTH - 1, CARD_HEIGHT - 1], fill=CARD_BG[0])
-    draw.text(( 8,  4), "NABLA VF TOP 50",          font=font(13),                   fill=(235, 235, 235))
-    draw.text(( 8, 22), username,                    font=best_font(16, username),    fill=WHITE)
-    draw.text(( 8, 45), f"{vf:.3f} VF",              font=font(17),                   fill=(255, 220, 90))
-    draw.text((CARD_WIDTH - 8,  4), "whiteou7.github.io/new-vf-calc", font=font(9), fill=GRAY, anchor="ra")
-    draw.text((CARD_WIDTH - 8, 53), now.strftime("%B %d, %Y"),         font=font(9), fill=GRAY, anchor="ra")
-    draw.line([(0, CARD_HEIGHT - 1), (CARD_WIDTH - 1, CARD_HEIGHT - 1)], fill=SEPARATOR)
+    mx, my = _slot_xy(0, 0)
+    draw.text((mx + 8,  my + 4), "NABLA VF TOP 50",          font=font(13),                   fill=(235, 235, 235))
+    draw.text((mx + 8, my + 22), username,                    font=best_font(16, username),    fill=WHITE)
+    draw.text((mx + 8, my + 45), f"{vf:.3f} VF",              font=font(17),                   fill=(255, 220, 90))
+    draw.text((mx + CARD_WIDTH - 8,  my + 4), "whiteou7.github.io/new-vf-calc", font=font(9), fill=GRAY, anchor="ra")
+    draw.text((mx + CARD_WIDTH - 8, my + 53), now.strftime("%B %d, %Y"),         font=font(9), fill=GRAY, anchor="ra")
 
     # ── Prefetch all jackets in parallel ─────────────────────────────────────
     song_ids = list({str(s["songId"]) for s in scores if s.get("songId")})
@@ -357,18 +381,12 @@ def generate_b50_image(data: dict) -> Image.Image:
         slot = i + 1  # slot 0 is the metadata block
         col  = slot % NUM_COLS
         row  = slot // NUM_COLS
+        cx, cy = _slot_xy(col, row)
         _draw_card(
             img, draw, score,
-            cx=col * (CARD_WIDTH + COLUMN_GAP),
-            cy=row * CARD_HEIGHT,
-            row=row,
+            cx=cx, cy=cy,
             rank=i + 1,
             jcache=jcache,
         )
-
-    # ── Column separators (full height) ──────────────────────────────────────
-    for c in range(1, NUM_COLS):
-        sx = c * (CARD_WIDTH + COLUMN_GAP) - COLUMN_GAP
-        draw.line([(sx, 0), (sx, IMAGE_HEIGHT - 1)], fill=SEPARATOR, width=COLUMN_GAP)
 
     return img
