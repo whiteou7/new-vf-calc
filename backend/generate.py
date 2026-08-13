@@ -36,13 +36,13 @@ COLOR_SCHEMES = {
         "bg_top":    (3, 16, 7),      # near-black green, top-left
         "bg_bottom": (11, 63, 18),    # rich, saturated green, bottom-right
         "card_tint": (190, 255, 200), # soft mint-green card highlight
-        "label":     "NABLA VF TOP 50",
+        "label":     "NABLA VF B50",
     },
     "exceed": {
         "bg_top":    (12, 13, 15),    # near-black gray, top-left
         "bg_bottom": (58, 60, 65),    # lighter slate gray, bottom-right
         "card_tint": (225, 228, 232), # soft cool-white card highlight
-        "label":     "EXCEED GEAR VF TOP 50",
+        "label":     "EXCEED GEAR VF B50",
     },
 }
 
