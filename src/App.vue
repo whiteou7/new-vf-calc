@@ -37,8 +37,12 @@
           </button>
         </div>
         <label class="checkbox-row">
-          <input type="checkbox" v-model="exceedGear" />
+          <input type="checkbox" v-model="pendingExceedGear" />
           Calculate Exceed Gear VF
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" v-model="pendingDisableMaxxive" />
+          Disable Maxxive Scores
         </label>
       </div>
 
@@ -69,7 +73,7 @@
 
       <section v-if="best50.length" class="results">
         <div class="results-header card">
-          <h2 class="vf-display">{{ exceedGear ? "Exceed Gear VF:" : "Nabla VF:" }} <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
+          <h2 class="vf-display">{{ appliedExceedGear ? "Exceed Gear VF:" : "Nabla VF:" }} <span class="vf-value">{{ totalVF.toFixed(3) }}</span></h2>
           <button type="button" class="btn btn-secondary export-csv-btn" @click="exportToCsv">
             Export to CSV
           </button>
@@ -128,7 +132,7 @@
                 <td class="col-level">{{ row.level }}</td>
                 <td class="col-score">{{ formatScore(row.score) }}</td>
                 <td class="col-grade"><span :class="['grade-badge', 'grade-' + gradeClass(row.grade)]">{{ row.grade }}</span></td>
-                <td class="col-clear lamp-cell">{{ row.lamp }}</td>
+                <td class="col-clear lamp-cell">{{ effectiveLamp(row.lamp) }}</td>
                 <td class="col-vf"><strong>{{ row.vf.toFixed(3) }}</strong></td>
               </tr>
             </tbody>
@@ -144,6 +148,7 @@
 import { ref, computed, onMounted } from "vue"
 import initSqlJs from "sql.js"
 import musicDbUrl from "@/assets/music_db.xml?url"
+import { calculateVF, clearCoeff, clearCoeffExceed, normalizeLampForScoring } from "./scoring.js"
 
 const mdb = ref({})
 const mdbReady = ref(false)
@@ -153,7 +158,10 @@ const loading = ref(false)
 const error = ref("")
 const best50 = ref([])
 const totalVF = ref(0)
-const exceedGear = ref(false)
+const pendingExceedGear = ref(false)
+const pendingDisableMaxxive = ref(false)
+const appliedExceedGear = ref(false)
+const appliedDisableMaxxive = ref(false)
 let msg = ""
 let skippedCount = 0
 
@@ -196,6 +204,10 @@ function formatScore(score) {
   return n.toLocaleString()
 }
 
+function effectiveLamp(lamp) {
+  return normalizeLampForScoring(lamp, appliedDisableMaxxive.value)
+}
+
 function gradeClass(grade) {
   return (grade || "").toLowerCase().replace("+", "plus")
 }
@@ -221,7 +233,7 @@ function exportToCsv() {
         row.level ?? "",
         formatScore(row.score),
         row.grade ?? "",
-        row.lamp ?? "",
+        effectiveLamp(row.lamp),
         row.vf != null ? row.vf.toFixed(3) : ""
       ].map(escapeCsvField).join(",")
     )
@@ -244,14 +256,14 @@ async function generateImage() {
     const payload = {
       username: activePlayerName.value || "Player",
       vf: totalVF.value,
-      mode: exceedGear.value ? "exceed" : "nabla",
+      mode: appliedExceedGear.value ? "exceed" : "nabla",
       scores: best50.value.map((r) => ({
         title: r.title,
         diff: r.diff,
         level: r.level,
         score: r.score,
         grade: r.grade,
-        lamp: r.lamp,
+        lamp: effectiveLamp(r.lamp),
         vf: r.vf,
         songId: r.songId,
         timeAchieved: r.timeAchieved ?? null,
@@ -443,35 +455,6 @@ function getLamp(score, miss, gaugeType, gauge) {
   return "FAILED" // PLAYED
 }
 
-const gradeCoeff = {
-  "PUC": 1.05,
-  "S": 1.05,
-  "AAA+": 1.02,
-  "AAA": 1.0,
-  "AA+": 0.97,
-  "AA": 0.94,
-  "A+": 0.91,
-  "A": 0.88,
-  "B": 0.85,
-  "C": 0.82,
-  "D": 0.8
-}
-
-const clearCoeff = {
-  "PERFECT ULTIMATE CHAIN": 1.10,
-  "ULTIMATE CHAIN": 1.06,
-  "MAXXIVE CLEAR": 1.04,
-  "EXCESSIVE CLEAR": 1.02,
-  "CLEAR": 1.0,
-  "FAILED": 0.5
-}
-
-// Exceed Gear (previous game version): same table, but ultimate chain coeff is 1.05
-const clearCoeffExceed = {
-  ...clearCoeff,
-  "ULTIMATE CHAIN": 1.05
-}
-
 function getLevel(chart, chartMeta) {
   if (!chartMeta) return 0
 
@@ -497,19 +480,8 @@ function roundLevelForMode(level, exceed) {
   return exceed ? Math.trunc(level) : level
 }
 
-function calculateVF({ level, score, grade, lamp }, exceed = false) {
-  const g = gradeCoeff[grade] ?? 1
-  const c = (exceed ? clearCoeffExceed : clearCoeff)[lamp] ?? 1
-  const lvl = roundLevelForMode(level, exceed)
-
-  const base =
-    lvl *
-    (score / 10_000_000) *
-    g *
-    c *
-    20
-
-  return Math.floor(base) * 0.001
+function calculateVFWithMode({ level, score, grade, lamp }, exceed = false) {
+  return calculateVF({ level: roundLevelForMode(level, exceed), score, grade, lamp }, exceed, appliedDisableMaxxive.value)
 }
 
 function getLevelFromMdb(mdbSong, diffIndex) {
@@ -573,6 +545,8 @@ async function onDbFileSelected(ev) {
 
     if (players.length === 1) {
       activePlayerName.value = players[0] ?? ""
+      appliedExceedGear.value = pendingExceedGear.value
+      appliedDisableMaxxive.value = pendingDisableMaxxive.value
       await calculateFromDb(db, players[0], scoresTable, chartsTable)
     } else {
       playerSelect.value = {
@@ -596,6 +570,8 @@ function confirmPlayerAndCalculate() {
   const { selected, dbBuffer, scoresTable, chartsTable } = playerSelect.value
   if (!selected || !dbBuffer) return
   activePlayerName.value = selected
+  appliedExceedGear.value = pendingExceedGear.value
+  appliedDisableMaxxive.value = pendingDisableMaxxive.value
   playerSelect.value = { visible: false, players: [], selected: "", dbBuffer: null }
   loading.value = true
   error.value = ""
@@ -699,7 +675,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
       continue
     }
 
-    const level = roundLevelForMode(getLevelFromMdb(mdbSong, chart.diff_index), exceedGear.value)
+    const level = roundLevelForMode(getLevelFromMdb(mdbSong, chart.diff_index), appliedExceedGear.value)
     const diff = (chart.diff_shortname || "NOV").toUpperCase()
 
     // PB = best score + best lamp (from any play on this chart)
@@ -712,7 +688,9 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
 
     for (const p of plays) {
       const lamp = getLamp(p.score, p.miss, p.gauge_type, p.gauge)
-      const c = clearCoeff[lamp] ?? 0.5
+      const effectiveLamp = normalizeLampForScoring(lamp, appliedDisableMaxxive.value)
+      const coeffTable = appliedExceedGear.value ? clearCoeffExceed : clearCoeff
+      const c = coeffTable[effectiveLamp] ?? 0.5
       if (c > bestLampCoeff) {
         bestLampCoeff = c
         bestLamp = lamp
@@ -720,7 +698,7 @@ async function calculateFromDb(db, userName, scoresTable, chartsTable) {
     }
 
     const grade = gradeFromScore(bestScore)
-    const vf = calculateVF({ level, score: bestScore, grade, lamp: bestLamp }, exceedGear.value)
+    const vf = calculateVFWithMode({ level, score: bestScore, grade, lamp: bestLamp }, appliedExceedGear.value)
 
     rows.push({
       chart_hash: chartHash,
@@ -758,6 +736,8 @@ async function loadData() {
   }
 
   activePlayerName.value = userId.value
+  appliedExceedGear.value = pendingExceedGear.value
+  appliedDisableMaxxive.value = pendingDisableMaxxive.value
   loading.value = true
 
   try {
@@ -784,14 +764,14 @@ async function loadData() {
         continue
       }
 
-      const level = roundLevelForMode(getLevel(chart, mdbSong), exceedGear.value)
+      const level = roundLevelForMode(getLevel(chart, mdbSong), appliedExceedGear.value)
 
-      const vf = calculateVF({
+      const vf = calculateVFWithMode({
         level,
         score: pb.scoreData.score,
         grade: pb.scoreData.grade,
         lamp: pb.scoreData.lamp
-      }, exceedGear.value)
+      }, appliedExceedGear.value)
 
       rows.push({
         chartID: pb.chartID,
