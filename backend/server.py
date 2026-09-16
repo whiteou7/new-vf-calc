@@ -14,6 +14,10 @@ CORS(app)          # allow requests from the Vite dev server
 # __name__ != "__main__" and the block below never executes.
 threading.Thread(target=prefetch_jackets, kwargs={"start": 1, "end": 3000}, daemon=True).start()
 
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "soumd voltex"}), 200
+
 
 @app.route("/api/generate-b50", methods=["POST"])
 def generate():
