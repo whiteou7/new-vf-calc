@@ -17131,7 +17131,7 @@
       <is_fixed __type="u8">1</is_fixed>
       <version __type="u8">2</version>
       <demo_pri __type="s8">0</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
+      <inf_ver __type="u8">7</inf_ver>
     </info>
     <difficulty>
       <novice>
@@ -17188,6 +17188,24 @@
           <one-hand __type="u16">45</one-hand>
         </radar>
       </exhaust>
+      <infinite>
+        <difnum __type="u8">195</difnum>
+        <illustrator>eimy齲 +URONIM</illustrator>
+        <effected_by>Dott. Velocissimo</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7271</max_exscore>
+        <radar>
+          <notes __type="u16">143</notes>
+          <peak __type="u16">132</peak>
+          <tsumami __type="u16">76</tsumami>
+          <tricky __type="u16">107</tricky>
+          <hand-trip __type="u16">75</hand-trip>
+          <one-hand __type="u16">125</one-hand>
+        </radar>
+      </infinite>
     </difficulty>
     <tag id="9"/>
   </music>
@@ -24424,7 +24442,7 @@
       <is_fixed __type="u8">1</is_fixed>
       <version __type="u8">2</version>
       <demo_pri __type="s8">0</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
+      <inf_ver __type="u8">7</inf_ver>
     </info>
     <difficulty>
       <novice>
@@ -24481,6 +24499,24 @@
           <one-hand __type="u16">37</one-hand>
         </radar>
       </exhaust>
+      <infinite>
+        <difnum __type="u8">170</difnum>
+        <illustrator>エジエレキ</illustrator>
+        <effected_by>山音りょー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3969</max_exscore>
+        <radar>
+          <notes __type="u16">78</notes>
+          <peak __type="u16">87</peak>
+          <tsumami __type="u16">63</tsumami>
+          <tricky __type="u16">21</tricky>
+          <hand-trip __type="u16">43</hand-trip>
+          <one-hand __type="u16">80</one-hand>
+        </radar>
+      </infinite>
     </difficulty>
   </music>
   <music id="318">
@@ -52782,7 +52818,7 @@
       <is_fixed __type="u8">1</is_fixed>
       <version __type="u8">3</version>
       <demo_pri __type="s8">-2</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
+      <inf_ver __type="u8">7</inf_ver>
     </info>
     <difficulty>
       <novice>
@@ -52839,6 +52875,24 @@
           <one-hand __type="u16">62</one-hand>
         </radar>
       </exhaust>
+      <infinite>
+        <difnum __type="u8">184</difnum>
+        <illustrator>Being Vs. 戦国の世 feat.宵の篝火</illustrator>
+        <effected_by>七色Method Vs. ゲーミング阿亀鸚哥 feat. 影符</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6735</max_exscore>
+        <radar>
+          <notes __type="u16">86</notes>
+          <peak __type="u16">137</peak>
+          <tsumami __type="u16">76</tsumami>
+          <tricky __type="u16">50</tricky>
+          <hand-trip __type="u16">73</hand-trip>
+          <one-hand __type="u16">111</one-hand>
+        </radar>
+      </infinite>
     </difficulty>
   </music>
   <music id="684">
@@ -91566,7 +91620,7 @@
   <music id="1130">
     <info>
       <title_name>怪盗Ｆの台本～消えたダイヤの謎～</title_name>
-      <title_yomigana>ｶｲﾄｳｴﾌﾉﾀﾞｲﾎﾝｷｴﾀﾀﾞｲﾔﾉﾅｿﾞ</title_yomigana>
+      <title_yomigana>ｶｲﾄｳｴﾌﾉｼﾅﾘｵｷｴﾀﾀﾞｲﾔﾉﾅｿﾞ</title_yomigana>
       <artist_name>ひとしずく×やま△ feat.松下、eclair、おさむらいさん、柿チョコ、コニー、しゅーず、che:櫻井、nero、びびあん、mao（bass）、ゆう十、リシェ</artist_name>
       <artist_yomigana>ﾋﾄｼｽﾞｸｶｹﾙﾔﾏｻﾝｶｯｹｲﾌｨｰﾁｬﾘﾝｸﾞﾏﾂｼﾀｴｸﾚｱｵｻﾑﾗｲｻﾝｶｷﾁｮｺｺﾆｰｼｭｰｽﾞﾁｪｻｸﾗｲﾈﾛﾋﾞﾋﾞｱﾝﾏｵﾍﾞｰｽﾕｳﾄﾘｼｪ</artist_yomigana>
       <ascii>kaitouf_matsushita</ascii>
@@ -119912,285 +119966,6 @@
           <tricky __type="u16">31</tricky>
           <hand-trip __type="u16">33</hand-trip>
           <one-hand __type="u16">87</one-hand>
-        </radar>
-      </maximum>
-    </difficulty>
-  </music>
-  <music id="1450">
-    <info>
-      <title_name>ユニバーページ（i-world Mix）</title_name>
-      <title_yomigana>ﾕﾆﾊﾞｰﾍﾟｰｼﾞｱｲﾜｰﾙﾄﾞﾐｯｸｽ</title_yomigana>
-      <artist_name>Remixed by BEMANI Sound Team "Yvya" feat. かなたん</artist_name>
-      <artist_yomigana>ﾕｳﾔﾌｨｰﾁｬﾘﾝｸﾞｶﾅﾀﾝ</artist_yomigana>
-      <ascii>univerpage_yvya</ascii>
-      <bpm_max __type="u32">19200</bpm_max>
-      <bpm_min __type="u32">19200</bpm_min>
-      <distribution_date __type="u32">20200702</distribution_date>
-      <volume __type="u16">91</volume>
-      <bg_no __type="u16">51</bg_no>
-      <genre __type="u32">64</genre>
-      <is_fixed __type="u8">1</is_fixed>
-      <version __type="u8">5</version>
-      <demo_pri __type="s8">-2</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
-    </info>
-    <difficulty>
-      <novice>
-        <difnum __type="u8">50</difnum>
-        <illustrator>すえ</illustrator>
-        <effected_by>鋼のビスカッチャ</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">1479</max_exscore>
-        <radar>
-          <notes __type="u16">21</notes>
-          <peak __type="u16">31</peak>
-          <tsumami __type="u16">25</tsumami>
-          <tricky __type="u16">0</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">0</one-hand>
-        </radar>
-      </novice>
-      <advanced>
-        <difnum __type="u8">100</difnum>
-        <illustrator>すえ</illustrator>
-        <effected_by>鋼のビスカッチャ</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">2457</max_exscore>
-        <radar>
-          <notes __type="u16">40</notes>
-          <peak __type="u16">56</peak>
-          <tsumami __type="u16">38</tsumami>
-          <tricky __type="u16">19</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">9</one-hand>
-        </radar>
-      </advanced>
-      <exhaust>
-        <difnum __type="u8">140</difnum>
-        <illustrator>すえ</illustrator>
-        <effected_by>鋼のビスカッチャ</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">3423</max_exscore>
-        <radar>
-          <notes __type="u16">74</notes>
-          <peak __type="u16">69</peak>
-          <tsumami __type="u16">27</tsumami>
-          <tricky __type="u16">31</tricky>
-          <hand-trip __type="u16">2</hand-trip>
-          <one-hand __type="u16">35</one-hand>
-        </radar>
-      </exhaust>
-      <maximum>
-        <difnum __type="u8">160</difnum>
-        <illustrator>すえ</illustrator>
-        <effected_by>鋼のビスカッチャ</effected_by>
-        <price __type="s32">-2</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">4898</max_exscore>
-        <radar>
-          <notes __type="u16">96</notes>
-          <peak __type="u16">88</peak>
-          <tsumami __type="u16">44</tsumami>
-          <tricky __type="u16">53</tricky>
-          <hand-trip __type="u16">34</hand-trip>
-          <one-hand __type="u16">90</one-hand>
-        </radar>
-      </maximum>
-    </difficulty>
-  </music>
-  <music id="1457">
-    <info>
-      <title_name>ふ・れ・ん・ど・し・た・い（WEREHEREMIX)</title_name>
-      <title_yomigana>ﾌﾚﾝﾄﾞｼﾀｲｳｨｱﾋｱﾐｯｸｽ</title_yomigana>
-      <artist_name>Remixed by ボルテ学園生活部</artist_name>
-      <artist_yomigana>ﾎﾞﾙﾃｶﾞｸｴﾝｾｲｶﾂﾌﾞ</artist_yomigana>
-      <ascii>friendshitai_voltegakuen</ascii>
-      <bpm_max __type="u32">17000</bpm_max>
-      <bpm_min __type="u32">17000</bpm_min>
-      <distribution_date __type="u32">20200702</distribution_date>
-      <volume __type="u16">91</volume>
-      <bg_no __type="u16">7</bg_no>
-      <genre __type="u32">64</genre>
-      <is_fixed __type="u8">1</is_fixed>
-      <version __type="u8">5</version>
-      <demo_pri __type="s8">-2</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
-    </info>
-    <difficulty>
-      <novice>
-        <difnum __type="u8">40</difnum>
-        <illustrator>平部員のｍ</illustrator>
-        <effected_by>ボルテ学園美術部</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">1424</max_exscore>
-        <radar>
-          <notes __type="u16">18</notes>
-          <peak __type="u16">25</peak>
-          <tsumami __type="u16">35</tsumami>
-          <tricky __type="u16">0</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">0</one-hand>
-        </radar>
-      </novice>
-      <advanced>
-        <difnum __type="u8">110</difnum>
-        <illustrator>平部員のｍ</illustrator>
-        <effected_by>ボルテ学園美術部</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">2616</max_exscore>
-        <radar>
-          <notes __type="u16">43</notes>
-          <peak __type="u16">54</peak>
-          <tsumami __type="u16">44</tsumami>
-          <tricky __type="u16">19</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">23</one-hand>
-        </radar>
-      </advanced>
-      <exhaust>
-        <difnum __type="u8">150</difnum>
-        <illustrator>平部員のｍ</illustrator>
-        <effected_by>ボルテ学園美術部</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">4113</max_exscore>
-        <radar>
-          <notes __type="u16">78</notes>
-          <peak __type="u16">94</peak>
-          <tsumami __type="u16">46</tsumami>
-          <tricky __type="u16">45</tricky>
-          <hand-trip __type="u16">13</hand-trip>
-          <one-hand __type="u16">62</one-hand>
-        </radar>
-      </exhaust>
-      <maximum>
-        <difnum __type="u8">170</difnum>
-        <illustrator>平部員のｍ</illustrator>
-        <effected_by>ボルテ学園美術部</effected_by>
-        <price __type="s32">-2</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">5447</max_exscore>
-        <radar>
-          <notes __type="u16">107</notes>
-          <peak __type="u16">100</peak>
-          <tsumami __type="u16">51</tsumami>
-          <tricky __type="u16">45</tricky>
-          <hand-trip __type="u16">43</hand-trip>
-          <one-hand __type="u16">101</one-hand>
-        </radar>
-      </maximum>
-    </difficulty>
-  </music>
-  <music id="1458">
-    <info>
-      <title_name>Daydream caf齷 (Euro Hopping Mix)</title_name>
-      <title_yomigana>ﾃﾞｲﾄﾞﾘｰﾑｶﾌｪﾕｰﾛﾎｯﾋﾟﾝｸﾞﾐｯｸｽ</title_yomigana>
-      <artist_name>Remixed by BEMANI Sound Team "TAG" feat. ななひら</artist_name>
-      <artist_yomigana>ﾀｸﾞﾌｨｰﾁｬﾘﾝｸﾞﾅﾅﾋﾗ</artist_yomigana>
-      <ascii>daydreamcafe_tag</ascii>
-      <bpm_max __type="u32">15400</bpm_max>
-      <bpm_min __type="u32">15400</bpm_min>
-      <distribution_date __type="u32">20200702</distribution_date>
-      <volume __type="u16">91</volume>
-      <bg_no __type="u16">61</bg_no>
-      <genre __type="u32">64</genre>
-      <is_fixed __type="u8">1</is_fixed>
-      <version __type="u8">5</version>
-      <demo_pri __type="s8">-2</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
-    </info>
-    <difficulty>
-      <novice>
-        <difnum __type="u8">30</difnum>
-        <illustrator>まゆずみ</illustrator>
-        <effected_by>SCバイオメトリクス</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">1302</max_exscore>
-        <radar>
-          <notes __type="u16">16</notes>
-          <peak __type="u16">23</peak>
-          <tsumami __type="u16">31</tsumami>
-          <tricky __type="u16">0</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">0</one-hand>
-        </radar>
-      </novice>
-      <advanced>
-        <difnum __type="u8">110</difnum>
-        <illustrator>まゆずみ</illustrator>
-        <effected_by>SCバイオメトリクス</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">2583</max_exscore>
-        <radar>
-          <notes __type="u16">45</notes>
-          <peak __type="u16">57</peak>
-          <tsumami __type="u16">39</tsumami>
-          <tricky __type="u16">19</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">27</one-hand>
-        </radar>
-      </advanced>
-      <exhaust>
-        <difnum __type="u8">140</difnum>
-        <illustrator>まゆずみ</illustrator>
-        <effected_by>SCバイオメトリクス</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">3083</max_exscore>
-        <radar>
-          <notes __type="u16">47</notes>
-          <peak __type="u16">71</peak>
-          <tsumami __type="u16">54</tsumami>
-          <tricky __type="u16">38</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">52</one-hand>
-        </radar>
-      </exhaust>
-      <maximum>
-        <difnum __type="u8">160</difnum>
-        <illustrator>まゆずみ</illustrator>
-        <effected_by>SCバイオメトリクス</effected_by>
-        <price __type="s32">-2</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">4396</max_exscore>
-        <radar>
-          <notes __type="u16">70</notes>
-          <peak __type="u16">79</peak>
-          <tsumami __type="u16">80</tsumami>
-          <tricky __type="u16">45</tricky>
-          <hand-trip __type="u16">23</hand-trip>
-          <one-hand __type="u16">119</one-hand>
         </radar>
       </maximum>
     </difficulty>
@@ -171793,194 +171568,6 @@
       </maximum>
     </difficulty>
   </music>
-  <music id="2035">
-    <info>
-      <title_name>Redo／アニメ「Re:ゼロから始める異世界生活」より</title_name>
-      <title_yomigana>ﾘﾄﾞｩｰ</title_yomigana>
-      <artist_name>鈴木このみ</artist_name>
-      <artist_yomigana>ｽｽﾞｷｺﾉﾐ</artist_yomigana>
-      <ascii>redo_rezero</ascii>
-      <bpm_max __type="u32">19000</bpm_max>
-      <bpm_min __type="u32">19000</bpm_min>
-      <distribution_date __type="u32">20230608</distribution_date>
-      <volume __type="u16">91</volume>
-      <bg_no __type="u16">58</bg_no>
-      <genre __type="u32">64</genre>
-      <is_fixed __type="u8">1</is_fixed>
-      <version __type="u8">6</version>
-      <demo_pri __type="s8">-2</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
-      <license_text>隯長月達平・株式会社KADOKAWA刊/Re:ゼロから始める異世界生活製作委員会</license_text>
-    </info>
-    <difficulty>
-      <novice>
-        <difnum __type="u8">20</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>Re:ーフジョッキー</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">30</jacket_mask>
-        <max_exscore __type="s32">1140</max_exscore>
-        <radar>
-          <notes __type="u16">15</notes>
-          <peak __type="u16">25</peak>
-          <tsumami __type="u16">38</tsumami>
-          <tricky __type="u16">0</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">0</one-hand>
-        </radar>
-      </novice>
-      <advanced>
-        <difnum __type="u8">100</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>Re:ーフジョッキー</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">30</jacket_mask>
-        <max_exscore __type="s32">2240</max_exscore>
-        <radar>
-          <notes __type="u16">45</notes>
-          <peak __type="u16">47</peak>
-          <tsumami __type="u16">27</tsumami>
-          <tricky __type="u16">19</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">19</one-hand>
-        </radar>
-      </advanced>
-      <exhaust>
-        <difnum __type="u8">140</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>Re:ーフジョッキー</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">30</jacket_mask>
-        <max_exscore __type="s32">3210</max_exscore>
-        <radar>
-          <notes __type="u16">66</notes>
-          <peak __type="u16">59</peak>
-          <tsumami __type="u16">49</tsumami>
-          <tricky __type="u16">31</tricky>
-          <hand-trip __type="u16">12</hand-trip>
-          <one-hand __type="u16">69</one-hand>
-        </radar>
-      </exhaust>
-      <maximum>
-        <difnum __type="u8">170</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>Re:ーフジョッキー</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">30</jacket_mask>
-        <max_exscore __type="s32">4541</max_exscore>
-        <radar>
-          <notes __type="u16">91</notes>
-          <peak __type="u16">86</peak>
-          <tsumami __type="u16">55</tsumami>
-          <tricky __type="u16">65</tricky>
-          <hand-trip __type="u16">50</hand-trip>
-          <one-hand __type="u16">107</one-hand>
-        </radar>
-      </maximum>
-    </difficulty>
-  </music>
-  <music id="2036">
-    <info>
-      <title_name>Realize／アニメ「Re:ゼロから始める異世界生活」より</title_name>
-      <title_yomigana>ﾘｱﾗｲｽﾞ</title_yomigana>
-      <artist_name>鈴木このみ</artist_name>
-      <artist_yomigana>ｽｽﾞｷｺﾉﾐ</artist_yomigana>
-      <ascii>realize_rezero</ascii>
-      <bpm_max __type="u32">20600</bpm_max>
-      <bpm_min __type="u32">20600</bpm_min>
-      <distribution_date __type="u32">20230622</distribution_date>
-      <volume __type="u16">91</volume>
-      <bg_no __type="u16">15</bg_no>
-      <genre __type="u32">64</genre>
-      <is_fixed __type="u8">1</is_fixed>
-      <version __type="u8">6</version>
-      <demo_pri __type="s8">-2</demo_pri>
-      <inf_ver __type="u8">0</inf_ver>
-      <license_text>隰2020 KADOKAWA CORPORATION</license_text>
-    </info>
-    <difficulty>
-      <novice>
-        <difnum __type="u8">30</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>ダークダークダーク</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">1122</max_exscore>
-        <radar>
-          <notes __type="u16">13</notes>
-          <peak __type="u16">25</peak>
-          <tsumami __type="u16">36</tsumami>
-          <tricky __type="u16">0</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">0</one-hand>
-        </radar>
-      </novice>
-      <advanced>
-        <difnum __type="u8">90</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>ダークダークダーク</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">2217</max_exscore>
-        <radar>
-          <notes __type="u16">21</notes>
-          <peak __type="u16">50</peak>
-          <tsumami __type="u16">56</tsumami>
-          <tricky __type="u16">19</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">6</one-hand>
-        </radar>
-      </advanced>
-      <exhaust>
-        <difnum __type="u8">140</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>ダークダークダーク</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">3564</max_exscore>
-        <radar>
-          <notes __type="u16">61</notes>
-          <peak __type="u16">62</peak>
-          <tsumami __type="u16">58</tsumami>
-          <tricky __type="u16">53</tricky>
-          <hand-trip __type="u16">0</hand-trip>
-          <one-hand __type="u16">40</one-hand>
-        </radar>
-      </exhaust>
-      <maximum>
-        <difnum __type="u8">170</difnum>
-        <illustrator>-</illustrator>
-        <effected_by>ダークダークダーク</effected_by>
-        <price __type="s32">-1</price>
-        <limited __type="u8">1</limited>
-        <jacket_print __type="s32">-2</jacket_print>
-        <jacket_mask __type="s32">0</jacket_mask>
-        <max_exscore __type="s32">4860</max_exscore>
-        <radar>
-          <notes __type="u16">83</notes>
-          <peak __type="u16">92</peak>
-          <tsumami __type="u16">75</tsumami>
-          <tricky __type="u16">60</tricky>
-          <hand-trip __type="u16">49</hand-trip>
-          <one-hand __type="u16">79</one-hand>
-        </radar>
-      </maximum>
-    </difficulty>
-  </music>
   <music id="2037">
     <info>
       <title_name>AP驩CALYPSE RAY</title_name>
@@ -176654,8 +176241,8 @@
     <info>
       <title_name>Don't you dare play GOD</title_name>
       <title_yomigana>ﾄﾞﾝﾁｭｰﾃﾞｱﾌﾟﾚｲｺﾞｯﾄﾞ</title_yomigana>
-      <artist_name>technoplanet feat. Tamako Kinoshita</artist_name>
-      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞﾀﾏｺｷﾉｼﾀ</artist_yomigana>
+      <artist_name>technoplanet feat. 木下珠子</artist_name>
+      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞｷﾉｼﾀﾀﾏｺ</artist_yomigana>
       <ascii>dontyoudare_technoplanet</ascii>
       <bpm_max __type="u32">50000</bpm_max>
       <bpm_min __type="u32">24000</bpm_min>
@@ -183421,8 +183008,8 @@
     <info>
       <title_name>Two of Wonder Lights</title_name>
       <title_yomigana>ﾄｩｰｵﾌﾞﾜﾝﾀﾞｰﾗｲﾂ</title_yomigana>
-      <artist_name>technoplanet feat. Tamako Kinoshita</artist_name>
-      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞﾀﾏｺｷﾉｼﾀ</artist_yomigana>
+      <artist_name>technoplanet feat. 木下珠子</artist_name>
+      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞｷﾉｼﾀﾀﾏｺ</artist_yomigana>
       <ascii>twoofwonder_technoplanet</ascii>
       <bpm_max __type="u32">26400</bpm_max>
       <bpm_min __type="u32">26400</bpm_min>
@@ -186317,7 +185904,7 @@
       <title_name>SOLAR ECLIPSE</title_name>
       <title_yomigana>ｿｰﾗｰｴｸﾘﾌﾟｽ</title_yomigana>
       <artist_name>Yuta Imai Vs. BEMANI Sound Team "Yvya"</artist_name>
-      <artist_yomigana>ﾕｳﾀｲﾏｲﾊﾞｰｻｽﾕｰﾔ</artist_yomigana>
+      <artist_yomigana>ﾕｳﾀｲﾏｲﾊﾞｰｻｽﾕｳﾔ</artist_yomigana>
       <ascii>solareclipse_yutayvya</ascii>
       <bpm_max __type="u32">19500</bpm_max>
       <bpm_min __type="u32">19500</bpm_min>
@@ -187531,8 +187118,8 @@
     <info>
       <title_name>Jupiter</title_name>
       <title_yomigana>ｼﾞｭﾋﾟﾀｰ</title_yomigana>
-      <artist_name>technoplanet feat. Tamako Kinoshita</artist_name>
-      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞﾀﾏｺｷﾉｼﾀ</artist_yomigana>
+      <artist_name>technoplanet feat. 木下珠子</artist_name>
+      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞｷﾉｼﾀﾀﾏｺ</artist_yomigana>
       <ascii>jupiter_technoplanet</ascii>
       <bpm_max __type="u32">22400</bpm_max>
       <bpm_min __type="u32">10200</bpm_min>
@@ -193416,6 +193003,100 @@
     </difficulty>
     <tag id="42"/>
   </music>
+  <music id="2268">
+    <info>
+      <title_name>Little Prana</title_name>
+      <title_yomigana>ﾘﾄﾙﾌﾟﾗｰﾅ</title_yomigana>
+      <artist_name>あまみ×ひなみ</artist_name>
+      <artist_yomigana>ｱﾏﾐﾋﾅﾐ</artist_yomigana>
+      <ascii>littleprana_amamihinami</ascii>
+      <bpm_max __type="u32">16000</bpm_max>
+      <bpm_min __type="u32">16000</bpm_min>
+      <distribution_date __type="u32">20260716</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">61</bg_no>
+      <genre __type="u32">6</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">50</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>ideological chrome</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1735</max_exscore>
+        <radar>
+          <notes __type="u16">19</notes>
+          <peak __type="u16">28</peak>
+          <tsumami __type="u16">24</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>ideological chrome</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2977</max_exscore>
+        <radar>
+          <notes __type="u16">43</notes>
+          <peak __type="u16">63</peak>
+          <tsumami __type="u16">36</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">39</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>ideological chrome</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4263</max_exscore>
+        <radar>
+          <notes __type="u16">68</notes>
+          <peak __type="u16">87</peak>
+          <tsumami __type="u16">54</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">49</hand-trip>
+          <one-hand __type="u16">78</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">182</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>ideological chrome</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6337</max_exscore>
+        <radar>
+          <notes __type="u16">109</notes>
+          <peak __type="u16">100</peak>
+          <tsumami __type="u16">57</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">99</hand-trip>
+          <one-hand __type="u16">138</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="42"/>
+  </music>
   <music id="2270">
     <info>
       <title_name>ンポロロッカ</title_name>
@@ -193505,6 +193186,100 @@
           <tricky __type="u16">45</tricky>
           <hand-trip __type="u16">38</hand-trip>
           <one-hand __type="u16">81</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="42"/>
+  </music>
+  <music id="2271">
+    <info>
+      <title_name>モノノケ狂想曲</title_name>
+      <title_yomigana>ﾓﾉﾉｹｷｮｳｿｳｷｮｸ</title_yomigana>
+      <artist_name>NAMV</artist_name>
+      <artist_yomigana>ﾅﾏ</artist_yomigana>
+      <ascii>mononokekyousou_namv</ascii>
+      <bpm_max __type="u32">24900</bpm_max>
+      <bpm_min __type="u32">8300</bpm_min>
+      <distribution_date __type="u32">20260716</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">10</bg_no>
+      <genre __type="u32">6</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>Graphite</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2195</max_exscore>
+        <radar>
+          <notes __type="u16">25</notes>
+          <peak __type="u16">37</peak>
+          <tsumami __type="u16">24</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>Graphite</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3487</max_exscore>
+        <radar>
+          <notes __type="u16">56</notes>
+          <peak __type="u16">62</peak>
+          <tsumami __type="u16">33</tsumami>
+          <tricky __type="u16">134</tricky>
+          <hand-trip __type="u16">1</hand-trip>
+          <one-hand __type="u16">33</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>Graphite</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5105</max_exscore>
+        <radar>
+          <notes __type="u16">90</notes>
+          <peak __type="u16">87</peak>
+          <tsumami __type="u16">41</tsumami>
+          <tricky __type="u16">135</tricky>
+          <hand-trip __type="u16">5</hand-trip>
+          <one-hand __type="u16">56</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">186</difnum>
+        <illustrator>Graphite</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6979</max_exscore>
+        <radar>
+          <notes __type="u16">122</notes>
+          <peak __type="u16">136</peak>
+          <tsumami __type="u16">47</tsumami>
+          <tricky __type="u16">136</tricky>
+          <hand-trip __type="u16">44</hand-trip>
+          <one-hand __type="u16">100</one-hand>
         </radar>
       </maximum>
     </difficulty>
@@ -194069,6 +193844,100 @@
           <tricky __type="u16">60</tricky>
           <hand-trip __type="u16">38</hand-trip>
           <one-hand __type="u16">125</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="42"/>
+  </music>
+  <music id="2281">
+    <info>
+      <title_name>Faith of Frenzy</title_name>
+      <title_yomigana>ﾌｪｲｽｵﾌﾞﾌﾚﾝｼﾞｰ</title_yomigana>
+      <artist_name>Juggernaut.</artist_name>
+      <artist_yomigana>ｼﾞｬｶﾞｰﾉｰﾄ</artist_yomigana>
+      <ascii>faithoffrenzy_juggernaut</ascii>
+      <bpm_max __type="u32">22200</bpm_max>
+      <bpm_min __type="u32">22200</bpm_min>
+      <distribution_date __type="u32">20260716</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">5</bg_no>
+      <genre __type="u32">6</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1969</max_exscore>
+        <radar>
+          <notes __type="u16">24</notes>
+          <peak __type="u16">35</peak>
+          <tsumami __type="u16">31</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3949</max_exscore>
+        <radar>
+          <notes __type="u16">63</notes>
+          <peak __type="u16">68</peak>
+          <tsumami __type="u16">21</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">20</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5040</max_exscore>
+        <radar>
+          <notes __type="u16">98</notes>
+          <peak __type="u16">95</peak>
+          <tsumami __type="u16">30</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">34</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">185</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7184</max_exscore>
+        <radar>
+          <notes __type="u16">140</notes>
+          <peak __type="u16">119</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">27</tricky>
+          <hand-trip __type="u16">24</hand-trip>
+          <one-hand __type="u16">59</one-hand>
         </radar>
       </maximum>
     </difficulty>
@@ -194926,7 +194795,7 @@
       <ascii>leflector_niwashi</ascii>
       <bpm_max __type="u32">19900</bpm_max>
       <bpm_min __type="u32">19900</bpm_min>
-      <distribution_date __type="u32">20260423</distribution_date>
+      <distribution_date __type="u32">20260430</distribution_date>
       <volume __type="u16">91</volume>
       <bg_no __type="u16">2</bg_no>
       <genre __type="u32">2</genre>
@@ -195020,7 +194889,7 @@
       <ascii>itsallright_lilyrock</ascii>
       <bpm_max __type="u32">15600</bpm_max>
       <bpm_min __type="u32">15600</bpm_min>
-      <distribution_date __type="u32">20260423</distribution_date>
+      <distribution_date __type="u32">20260430</distribution_date>
       <volume __type="u16">91</volume>
       <bg_no __type="u16">75</bg_no>
       <genre __type="u32">2</genre>
@@ -195194,6 +195063,100 @@
           <tricky __type="u16">60</tricky>
           <hand-trip __type="u16">111</hand-trip>
           <one-hand __type="u16">137</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="43"/>
+  </music>
+  <music id="2298">
+    <info>
+      <title_name>Dizzy Echoes</title_name>
+      <title_yomigana>ﾃﾞｨｼﾞｰｴｺｰｽﾞ</title_yomigana>
+      <artist_name>Laur</artist_name>
+      <artist_yomigana>ﾗｳﾙ</artist_yomigana>
+      <ascii>dizzyechoes_laur</ascii>
+      <bpm_max __type="u32">20000</bpm_max>
+      <bpm_min __type="u32">17400</bpm_min>
+      <distribution_date __type="u32">20260702</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">10</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1876</max_exscore>
+        <radar>
+          <notes __type="u16">17</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">59</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3592</max_exscore>
+        <radar>
+          <notes __type="u16">70</notes>
+          <peak __type="u16">64</peak>
+          <tsumami __type="u16">38</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">37</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4884</max_exscore>
+        <radar>
+          <notes __type="u16">97</notes>
+          <peak __type="u16">95</peak>
+          <tsumami __type="u16">44</tsumami>
+          <tricky __type="u16">48</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">44</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">182</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>電撃ロブスター</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6199</max_exscore>
+        <radar>
+          <notes __type="u16">116</notes>
+          <peak __type="u16">118</peak>
+          <tsumami __type="u16">88</tsumami>
+          <tricky __type="u16">67</tricky>
+          <hand-trip __type="u16">105</hand-trip>
+          <one-hand __type="u16">156</one-hand>
         </radar>
       </maximum>
     </difficulty>
@@ -195481,6 +195444,100 @@
     </difficulty>
     <tag id="43"/>
   </music>
+  <music id="2304">
+    <info>
+      <title_name>ユニゾンなデイズ♪</title_name>
+      <title_yomigana>ﾕﾆｿﾞﾝﾅﾃﾞｲｽﾞ</title_yomigana>
+      <artist_name>みーに feat. 春瀬愛羅＆味醂いろは</artist_name>
+      <artist_yomigana>ﾐｰﾆﾌｨｰﾄﾊﾙｾｱｲﾗｱﾝﾄﾞﾐﾘﾝｲﾛﾊ</artist_yomigana>
+      <ascii>unisonnadays_miini</ascii>
+      <bpm_max __type="u32">15200</bpm_max>
+      <bpm_min __type="u32">15200</bpm_min>
+      <distribution_date __type="u32">20260702</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">60</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">50</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1675</max_exscore>
+        <radar>
+          <notes __type="u16">20</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">47</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">120</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3447</max_exscore>
+        <radar>
+          <notes __type="u16">52</notes>
+          <peak __type="u16">68</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">9</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">48</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">150</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3871</max_exscore>
+        <radar>
+          <notes __type="u16">63</notes>
+          <peak __type="u16">68</peak>
+          <tsumami __type="u16">38</tsumami>
+          <tricky __type="u16">33</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">36</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">175</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6070</max_exscore>
+        <radar>
+          <notes __type="u16">94</notes>
+          <peak __type="u16">95</peak>
+          <tsumami __type="u16">69</tsumami>
+          <tricky __type="u16">41</tricky>
+          <hand-trip __type="u16">33</hand-trip>
+          <one-hand __type="u16">90</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="43"/>
+  </music>
   <music id="2305">
     <info>
       <title_name>Sunlit toybox</title_name>
@@ -195669,6 +195726,100 @@
     </difficulty>
     <tag id="43"/>
   </music>
+  <music id="2307">
+    <info>
+      <title_name>Melted Energy</title_name>
+      <title_yomigana>ﾒﾙﾃｯﾄﾞｴﾅｼﾞｰ</title_yomigana>
+      <artist_name>rein jack x mernon</artist_name>
+      <artist_yomigana>ﾚｲﾝｼﾞｬｯｸﾒﾙﾉﾝ</artist_yomigana>
+      <ascii>meltedenergy_reinjackmernon</ascii>
+      <bpm_max __type="u32">22200</bpm_max>
+      <bpm_min __type="u32">22200</bpm_min>
+      <distribution_date __type="u32">20260702</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">5</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>ayuta</illustrator>
+        <effected_by>ゆめいろパフィー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2148</max_exscore>
+        <radar>
+          <notes __type="u16">25</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">25</tsumami>
+          <tricky __type="u16">1</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>ayuta</illustrator>
+        <effected_by>ゆめいろパフィー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4043</max_exscore>
+        <radar>
+          <notes __type="u16">58</notes>
+          <peak __type="u16">81</peak>
+          <tsumami __type="u16">26</tsumami>
+          <tricky __type="u16">16</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">44</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>ayuta</illustrator>
+        <effected_by>ゆめいろパフィー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5273</max_exscore>
+        <radar>
+          <notes __type="u16">81</notes>
+          <peak __type="u16">100</peak>
+          <tsumami __type="u16">51</tsumami>
+          <tricky __type="u16">27</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">55</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">187</difnum>
+        <illustrator>ayuta</illustrator>
+        <effected_by>ゆめいろパフィー</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7956</max_exscore>
+        <radar>
+          <notes __type="u16">115</notes>
+          <peak __type="u16">140</peak>
+          <tsumami __type="u16">99</tsumami>
+          <tricky __type="u16">56</tricky>
+          <hand-trip __type="u16">117</hand-trip>
+          <one-hand __type="u16">135</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="43"/>
+  </music>
   <music id="2309">
     <info>
       <title_name>Vanishment for reconstruction</title_name>
@@ -195678,7 +195829,7 @@
       <ascii>vanishmentfor_kagetora</ascii>
       <bpm_max __type="u32">15800</bpm_max>
       <bpm_min __type="u32">15800</bpm_min>
-      <distribution_date __type="u32">20260423</distribution_date>
+      <distribution_date __type="u32">20260430</distribution_date>
       <volume __type="u16">91</volume>
       <bg_no __type="u16">10</bg_no>
       <genre __type="u32">2</genre>
@@ -195857,6 +196008,100 @@
     </difficulty>
     <tag id="43"/>
   </music>
+  <music id="2311">
+    <info>
+      <title_name>Track Laundering</title_name>
+      <title_yomigana>ﾄﾗｯｸﾛﾝﾀﾞﾘﾝｸﾞ</title_yomigana>
+      <artist_name>原木シィタケ＋Aoi</artist_name>
+      <artist_yomigana>ﾊﾗｷｼｨﾀｹﾌﾟﾗｽｱｵｲ</artist_yomigana>
+      <ascii>tracklaundering_genbokuaoi</ascii>
+      <bpm_max __type="u32">16000</bpm_max>
+      <bpm_min __type="u32">16000</bpm_min>
+      <distribution_date __type="u32">20260702</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">58</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>水森なつる</illustrator>
+        <effected_by>フォックスロット</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1962</max_exscore>
+        <radar>
+          <notes __type="u16">25</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">33</tsumami>
+          <tricky __type="u16">1</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>水森なつる</illustrator>
+        <effected_by>フォックスロット</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3612</max_exscore>
+        <radar>
+          <notes __type="u16">52</notes>
+          <peak __type="u16">70</peak>
+          <tsumami __type="u16">38</tsumami>
+          <tricky __type="u16">16</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">44</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>水森なつる</illustrator>
+        <effected_by>フォックスロット</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5233</max_exscore>
+        <radar>
+          <notes __type="u16">83</notes>
+          <peak __type="u16">106</peak>
+          <tsumami __type="u16">62</tsumami>
+          <tricky __type="u16">33</tricky>
+          <hand-trip __type="u16">15</hand-trip>
+          <one-hand __type="u16">55</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">186</difnum>
+        <illustrator>水森なつる</illustrator>
+        <effected_by>フォックスロット</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6819</max_exscore>
+        <radar>
+          <notes __type="u16">100</notes>
+          <peak __type="u16">124</peak>
+          <tsumami __type="u16">92</tsumami>
+          <tricky __type="u16">65</tricky>
+          <hand-trip __type="u16">135</hand-trip>
+          <one-hand __type="u16">169</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="43"/>
+  </music>
   <music id="2313">
     <info>
       <title_name>あすはまたたくほしのように</title_name>
@@ -195866,7 +196111,7 @@
       <ascii>asuhamatataku_namv</ascii>
       <bpm_max __type="u32">19500</bpm_max>
       <bpm_min __type="u32">12000</bpm_min>
-      <distribution_date __type="u32">20260423</distribution_date>
+      <distribution_date __type="u32">20260430</distribution_date>
       <volume __type="u16">91</volume>
       <bg_no __type="u16">60</bg_no>
       <genre __type="u32">2</genre>
@@ -197732,6 +197977,471 @@
           <tricky __type="u16">60</tricky>
           <hand-trip __type="u16">108</hand-trip>
           <one-hand __type="u16">112</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2333">
+    <info>
+      <title_name>なんてシュペール</title_name>
+      <title_yomigana>ﾅﾝﾃｼｭﾍﾟｰﾙ</title_yomigana>
+      <artist_name>音戯探偵ひなビタ鷸</artist_name>
+      <artist_yomigana>ｵﾄｷﾞﾀﾝﾃｲﾋﾅﾋﾞﾀ</artist_yomigana>
+      <ascii>nanteshuberu_yvya</ascii>
+      <bpm_max __type="u32">19500</bpm_max>
+      <bpm_min __type="u32">19500</bpm_min>
+      <distribution_date __type="u32">20260521</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">30</bg_no>
+      <genre __type="u32">128</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">40</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>ユカリ☆chan</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1796</max_exscore>
+        <radar>
+          <notes __type="u16">17</notes>
+          <peak __type="u16">26</peak>
+          <tsumami __type="u16">33</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">120</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>ユカリ☆chan</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3048</max_exscore>
+        <radar>
+          <notes __type="u16">42</notes>
+          <peak __type="u16">51</peak>
+          <tsumami __type="u16">32</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">8</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">150</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>ユカリ☆chan</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4201</max_exscore>
+        <radar>
+          <notes __type="u16">56</notes>
+          <peak __type="u16">62</peak>
+          <tsumami __type="u16">43</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">5</hand-trip>
+          <one-hand __type="u16">48</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">170</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>ユカリ☆chan</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5558</max_exscore>
+        <radar>
+          <notes __type="u16">82</notes>
+          <peak __type="u16">115</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">48</hand-trip>
+          <one-hand __type="u16">92</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2334">
+    <info>
+      <title_name>謎解き☆クイーン！</title_name>
+      <title_yomigana>ﾅｿﾞﾄｷｸｲｰﾝ</title_yomigana>
+      <artist_name>音戯探偵ひなビタ鷸</artist_name>
+      <artist_yomigana>ｵﾄｷﾞﾀﾝﾃｲﾋﾅﾋﾞﾀ</artist_yomigana>
+      <ascii>nazotokiqueen_keiju</ascii>
+      <bpm_max __type="u32">12800</bpm_max>
+      <bpm_min __type="u32">12800</bpm_min>
+      <distribution_date __type="u32">20260521</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">86</bg_no>
+      <genre __type="u32">128</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">30</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>KE!JU</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1003</max_exscore>
+        <radar>
+          <notes __type="u16">17</notes>
+          <peak __type="u16">18</peak>
+          <tsumami __type="u16">18</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">100</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>KE!JU</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2002</max_exscore>
+        <radar>
+          <notes __type="u16">29</notes>
+          <peak __type="u16">46</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">32</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">140</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>KE!JU</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3035</max_exscore>
+        <radar>
+          <notes __type="u16">61</notes>
+          <peak __type="u16">69</peak>
+          <tsumami __type="u16">36</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">47</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">170</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>KE!JU</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4314</max_exscore>
+        <radar>
+          <notes __type="u16">90</notes>
+          <peak __type="u16">114</peak>
+          <tsumami __type="u16">42</tsumami>
+          <tricky __type="u16">45</tricky>
+          <hand-trip __type="u16">46</hand-trip>
+          <one-hand __type="u16">74</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2335">
+    <info>
+      <title_name>スペクター・チェイサー</title_name>
+      <title_yomigana>ｽﾍﾟｸﾀｰﾁｪｲｻｰ</title_yomigana>
+      <artist_name>音戯探偵ひなビタ鷸</artist_name>
+      <artist_yomigana>ｵﾄｷﾞﾀﾝﾃｲﾋﾅﾋﾞﾀ</artist_yomigana>
+      <ascii>specterchaser_coyaan</ascii>
+      <bpm_max __type="u32">13200</bpm_max>
+      <bpm_min __type="u32">13200</bpm_min>
+      <distribution_date __type="u32">20260521</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">12</bg_no>
+      <genre __type="u32">128</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">40</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>直垂すもも鷸</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1325</max_exscore>
+        <radar>
+          <notes __type="u16">18</notes>
+          <peak __type="u16">25</peak>
+          <tsumami __type="u16">20</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">120</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>直垂すもも鷸</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2729</max_exscore>
+        <radar>
+          <notes __type="u16">38</notes>
+          <peak __type="u16">43</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">7</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">30</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">150</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>直垂すもも鷸</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3634</max_exscore>
+        <radar>
+          <notes __type="u16">53</notes>
+          <peak __type="u16">75</peak>
+          <tsumami __type="u16">68</tsumami>
+          <tricky __type="u16">27</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">76</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">170</difnum>
+        <illustrator>GUI</illustrator>
+        <effected_by>直垂すもも鷸</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6308</max_exscore>
+        <radar>
+          <notes __type="u16">97</notes>
+          <peak __type="u16">122</peak>
+          <tsumami __type="u16">78</tsumami>
+          <tricky __type="u16">45</tricky>
+          <hand-trip __type="u16">29</hand-trip>
+          <one-hand __type="u16">80</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2336">
+    <info>
+      <title_name>ちくたく2ちく2ぱ</title_name>
+      <title_yomigana>ﾁｸﾀｸﾁｸﾀｸﾁｸﾁｸﾊﾟ</title_yomigana>
+      <artist_name>音戯探偵ひなビタ鷸</artist_name>
+      <artist_yomigana>ｵﾄｷﾞﾀﾝﾃｲﾋﾅﾋﾞﾀ</artist_yomigana>
+      <ascii>ticktackchikupa_risyuu</ascii>
+      <bpm_max __type="u32">19000</bpm_max>
+      <bpm_min __type="u32">19000</bpm_min>
+      <distribution_date __type="u32">20260521</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">7</bg_no>
+      <genre __type="u32">128</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">50</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>ビー2ジョッ2ー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1832</max_exscore>
+        <radar>
+          <notes __type="u16">17</notes>
+          <peak __type="u16">26</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>ビー2ジョッ2ー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3214</max_exscore>
+        <radar>
+          <notes __type="u16">60</notes>
+          <peak __type="u16">62</peak>
+          <tsumami __type="u16">24</tsumami>
+          <tricky __type="u16">33</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">26</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>ビー2ジョッ2ー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4274</max_exscore>
+        <radar>
+          <notes __type="u16">79</notes>
+          <peak __type="u16">82</peak>
+          <tsumami __type="u16">32</tsumami>
+          <tricky __type="u16">60</tricky>
+          <hand-trip __type="u16">14</hand-trip>
+          <one-hand __type="u16">41</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">186</difnum>
+        <illustrator>MIRAI</illustrator>
+        <effected_by>ビー2ジョッ2ー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6110</max_exscore>
+        <radar>
+          <notes __type="u16">108</notes>
+          <peak __type="u16">120</peak>
+          <tsumami __type="u16">71</tsumami>
+          <tricky __type="u16">66</tricky>
+          <hand-trip __type="u16">111</hand-trip>
+          <one-hand __type="u16">113</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2337">
+    <info>
+      <title_name>レシピのリドル</title_name>
+      <title_yomigana>ﾚｼﾋﾟﾉﾘﾄﾞﾙ</title_yomigana>
+      <artist_name>音戯探偵ひなビタ鷸</artist_name>
+      <artist_yomigana>ｵﾄｷﾞﾀﾝﾃｲﾋﾅﾋﾞﾀ</artist_yomigana>
+      <ascii>recipinoriddle_oster</ascii>
+      <bpm_max __type="u32">24500</bpm_max>
+      <bpm_min __type="u32">24500</bpm_min>
+      <distribution_date __type="u32">20260521</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">63</bg_no>
+      <genre __type="u32">128</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>はるお</illustrator>
+        <effected_by>まるっと解決♪ボルテ探偵社</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2352</max_exscore>
+        <radar>
+          <notes __type="u16">19</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">29</tsumami>
+          <tricky __type="u16">3</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>はるお</illustrator>
+        <effected_by>まるっと解決♪ボルテ探偵社</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4053</max_exscore>
+        <radar>
+          <notes __type="u16">40</notes>
+          <peak __type="u16">53</peak>
+          <tsumami __type="u16">40</tsumami>
+          <tricky __type="u16">13</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">21</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>はるお</illustrator>
+        <effected_by>まるっと解決♪ボルテ探偵社</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6666</max_exscore>
+        <radar>
+          <notes __type="u16">74</notes>
+          <peak __type="u16">89</peak>
+          <tsumami __type="u16">55</tsumami>
+          <tricky __type="u16">39</tricky>
+          <hand-trip __type="u16">30</hand-trip>
+          <one-hand __type="u16">84</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">183</difnum>
+        <illustrator>はるお</illustrator>
+        <effected_by>まるっと解決♪ボルテ探偵社</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7911</max_exscore>
+        <radar>
+          <notes __type="u16">116</notes>
+          <peak __type="u16">106</peak>
+          <tsumami __type="u16">42</tsumami>
+          <tricky __type="u16">70</tricky>
+          <hand-trip __type="u16">134</hand-trip>
+          <one-hand __type="u16">110</one-hand>
         </radar>
       </maximum>
     </difficulty>
@@ -202127,6 +202837,99 @@
       </maximum>
     </difficulty>
   </music>
+  <music id="2387">
+    <info>
+      <title_name>ZILLION RAY</title_name>
+      <title_yomigana>ｼﾞﾘｵﾝﾚｲ</title_yomigana>
+      <artist_name>SOUND HOLIC feat. Nana Takahashi</artist_name>
+      <artist_yomigana>ｻｳﾝﾄﾞﾎﾘｯｸﾌｨｰﾁｬﾘﾝｸﾞﾅﾅﾀｶﾊｼ</artist_yomigana>
+      <ascii>zillionray_soundholic</ascii>
+      <bpm_max __type="u32">16700</bpm_max>
+      <bpm_min __type="u32">16700</bpm_min>
+      <distribution_date __type="u32">20260723</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">88</bg_no>
+      <genre __type="u32">32</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">50</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1701</max_exscore>
+        <radar>
+          <notes __type="u16">15</notes>
+          <peak __type="u16">25</peak>
+          <tsumami __type="u16">43</tsumami>
+          <tricky __type="u16">3</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">120</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3194</max_exscore>
+        <radar>
+          <notes __type="u16">47</notes>
+          <peak __type="u16">60</peak>
+          <tsumami __type="u16">30</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">32</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">150</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4484</max_exscore>
+        <radar>
+          <notes __type="u16">74</notes>
+          <peak __type="u16">87</peak>
+          <tsumami __type="u16">52</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">79</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">170</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>Mikaranti-ni</effected_by>
+        <price __type="s32">-2</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5837</max_exscore>
+        <radar>
+          <notes __type="u16">106</notes>
+          <peak __type="u16">101</peak>
+          <tsumami __type="u16">52</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">61</hand-trip>
+          <one-hand __type="u16">96</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
   <music id="2388">
     <info>
       <title_name>Silent Flame,Never Fade</title_name>
@@ -202512,7 +203315,7 @@
       <ascii>dementafterlegend_cosmograph</ascii>
       <bpm_max __type="u32">21000</bpm_max>
       <bpm_min __type="u32">21000</bpm_min>
-      <distribution_date __type="u32">20260423</distribution_date>
+      <distribution_date __type="u32">20260430</distribution_date>
       <volume __type="u16">91</volume>
       <bg_no __type="u16">58</bg_no>
       <genre __type="u32">0</genre>
@@ -202593,6 +203396,1874 @@
           <tricky __type="u16">70</tricky>
           <hand-trip __type="u16">61</hand-trip>
           <one-hand __type="u16">68</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2393">
+    <info>
+      <title_name>ΔLI∇E</title_name>
+      <title_yomigana>ｱﾗｲﾌﾞ</title_yomigana>
+      <artist_name>打打だいず</artist_name>
+      <artist_yomigana>ﾀﾞﾀﾞﾀﾞｲｽﾞ</artist_yomigana>
+      <ascii>alive_dadadaizu</ascii>
+      <bpm_max __type="u32">21400</bpm_max>
+      <bpm_min __type="u32">21400</bpm_min>
+      <distribution_date __type="u32">20260604</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">118</bg_no>
+      <genre __type="u32">32</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">80</difnum>
+        <illustrator>アユタ</illustrator>
+        <effected_by>TEK-Δ-RHYTHM</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3124</max_exscore>
+        <radar>
+          <notes __type="u16">32</notes>
+          <peak __type="u16">45</peak>
+          <tsumami __type="u16">30</tsumami>
+          <tricky __type="u16">1</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">4</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">150</difnum>
+        <illustrator>アユタ</illustrator>
+        <effected_by>TEK-Δ-RHYTHM</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4882</max_exscore>
+        <radar>
+          <notes __type="u16">65</notes>
+          <peak __type="u16">82</peak>
+          <tsumami __type="u16">45</tsumami>
+          <tricky __type="u16">45</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">42</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">185</difnum>
+        <illustrator>アユタ</illustrator>
+        <effected_by>TEK-Δ-RHYTHM</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7437</max_exscore>
+        <radar>
+          <notes __type="u16">113</notes>
+          <peak __type="u16">157</peak>
+          <tsumami __type="u16">54</tsumami>
+          <tricky __type="u16">53</tricky>
+          <hand-trip __type="u16">47</hand-trip>
+          <one-hand __type="u16">80</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">207</difnum>
+        <illustrator>アユタ</illustrator>
+        <effected_by>TEK-Δ-RHYTHM</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">10207</max_exscore>
+        <radar>
+          <notes __type="u16">174</notes>
+          <peak __type="u16">169</peak>
+          <tsumami __type="u16">52</tsumami>
+          <tricky __type="u16">143</tricky>
+          <hand-trip __type="u16">144</hand-trip>
+          <one-hand __type="u16">157</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2394">
+    <info>
+      <title_name>ΛVYXXIRENIΛ</title_name>
+      <title_yomigana>ｱｳﾞｨｼﾚﾆｱ</title_yomigana>
+      <artist_name>qfeileadh</artist_name>
+      <artist_yomigana>ﾌｪｲﾘｱ</artist_yomigana>
+      <ascii>avyxxirenia_qfeileadh</ascii>
+      <bpm_max __type="u32">27000</bpm_max>
+      <bpm_min __type="u32">27000</bpm_min>
+      <distribution_date __type="u32">20260604</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">112</bg_no>
+      <genre __type="u32">32</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>S骭nderセニョー己</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1638</max_exscore>
+        <radar>
+          <notes __type="u16">26</notes>
+          <peak __type="u16">37</peak>
+          <tsumami __type="u16">22</tsumami>
+          <tricky __type="u16">1</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>S骭nderセニョー己</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3463</max_exscore>
+        <radar>
+          <notes __type="u16">64</notes>
+          <peak __type="u16">70</peak>
+          <tsumami __type="u16">26</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">32</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">175</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>S骭nderセニョー己</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5136</max_exscore>
+        <radar>
+          <notes __type="u16">103</notes>
+          <peak __type="u16">125</peak>
+          <tsumami __type="u16">50</tsumami>
+          <tricky __type="u16">53</tricky>
+          <hand-trip __type="u16">12</hand-trip>
+          <one-hand __type="u16">77</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">195</difnum>
+        <illustrator>minoru</illustrator>
+        <effected_by>S骭nderセニョー己</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7379</max_exscore>
+        <radar>
+          <notes __type="u16">152</notes>
+          <peak __type="u16">145</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">72</tricky>
+          <hand-trip __type="u16">45</hand-trip>
+          <one-hand __type="u16">88</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2395">
+    <info>
+      <title_name>凌天滅狐</title_name>
+      <title_yomigana>ﾘｮｳﾃﾝﾒｯｺ</title_yomigana>
+      <artist_name>影虎。</artist_name>
+      <artist_yomigana>ｶｹﾞﾄﾗ</artist_yomigana>
+      <ascii>ryotenmekko_kagetora</ascii>
+      <bpm_max __type="u32">19000</bpm_max>
+      <bpm_min __type="u32">19000</bpm_min>
+      <distribution_date __type="u32">20260604</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">112</bg_no>
+      <genre __type="u32">32</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>実埜琉</illustrator>
+        <effected_by>沙紋喰菲</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2307</max_exscore>
+        <radar>
+          <notes __type="u16">25</notes>
+          <peak __type="u16">43</peak>
+          <tsumami __type="u16">34</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">1</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>実埜琉</illustrator>
+        <effected_by>沙紋喰菲</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4310</max_exscore>
+        <radar>
+          <notes __type="u16">77</notes>
+          <peak __type="u16">75</peak>
+          <tsumami __type="u16">17</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">31</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">170</difnum>
+        <illustrator>実埜琉</illustrator>
+        <effected_by>沙紋喰菲</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5940</max_exscore>
+        <radar>
+          <notes __type="u16">119</notes>
+          <peak __type="u16">108</peak>
+          <tsumami __type="u16">17</tsumami>
+          <tricky __type="u16">37</tricky>
+          <hand-trip __type="u16">3</hand-trip>
+          <one-hand __type="u16">35</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">195</difnum>
+        <illustrator>実埜琉</illustrator>
+        <effected_by>沙紋喰菲</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">8609</max_exscore>
+        <radar>
+          <notes __type="u16">174</notes>
+          <peak __type="u16">155</peak>
+          <tsumami __type="u16">29</tsumami>
+          <tricky __type="u16">80</tricky>
+          <hand-trip __type="u16">14</hand-trip>
+          <one-hand __type="u16">63</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2396">
+    <info>
+      <title_name>Solitary Poison</title_name>
+      <title_yomigana>ｿﾘﾀﾘｰﾎﾟｲｽﾞﾝ</title_yomigana>
+      <artist_name>Alkome</artist_name>
+      <artist_yomigana>ｱﾙｺﾒ</artist_yomigana>
+      <ascii>solitarypoison_alkome</ascii>
+      <bpm_max __type="u32">17000</bpm_max>
+      <bpm_min __type="u32">17000</bpm_min>
+      <distribution_date __type="u32">20260604</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">112</bg_no>
+      <genre __type="u32">32</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>conceptual explorer</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1860</max_exscore>
+        <radar>
+          <notes __type="u16">26</notes>
+          <peak __type="u16">37</peak>
+          <tsumami __type="u16">30</tsumami>
+          <tricky __type="u16">1</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>conceptual explorer</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3777</max_exscore>
+        <radar>
+          <notes __type="u16">37</notes>
+          <peak __type="u16">82</peak>
+          <tsumami __type="u16">99</tsumami>
+          <tricky __type="u16">27</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">28</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">175</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>conceptual explorer</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5502</max_exscore>
+        <radar>
+          <notes __type="u16">60</notes>
+          <peak __type="u16">92</peak>
+          <tsumami __type="u16">154</tsumami>
+          <tricky __type="u16">53</tricky>
+          <hand-trip __type="u16">8</hand-trip>
+          <one-hand __type="u16">73</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">196</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>conceptual explorer</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7073</max_exscore>
+        <radar>
+          <notes __type="u16">83</notes>
+          <peak __type="u16">116</peak>
+          <tsumami __type="u16">200</tsumami>
+          <tricky __type="u16">89</tricky>
+          <hand-trip __type="u16">67</hand-trip>
+          <one-hand __type="u16">121</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2397">
+    <info>
+      <title_name>ULTRACHARGE</title_name>
+      <title_yomigana>ｳﾙﾄﾗﾁｬｰｼﾞ</title_yomigana>
+      <artist_name>Yuta Imai</artist_name>
+      <artist_yomigana>ﾕｳﾀｲﾏｲ</artist_yomigana>
+      <ascii>ultracharge_yutaimai</ascii>
+      <bpm_max __type="u32">22000</bpm_max>
+      <bpm_min __type="u32">5500</bpm_min>
+      <distribution_date __type="u32">20260604</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">112</bg_no>
+      <genre __type="u32">32</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>さもえんぬん</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2344</max_exscore>
+        <radar>
+          <notes __type="u16">33</notes>
+          <peak __type="u16">42</peak>
+          <tsumami __type="u16">43</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>さもえんぬん</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4232</max_exscore>
+        <radar>
+          <notes __type="u16">54</notes>
+          <peak __type="u16">64</peak>
+          <tsumami __type="u16">38</tsumami>
+          <tricky __type="u16">45</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">57</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">175</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>さもえんぬん</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6485</max_exscore>
+        <radar>
+          <notes __type="u16">88</notes>
+          <peak __type="u16">125</peak>
+          <tsumami __type="u16">84</tsumami>
+          <tricky __type="u16">92</tricky>
+          <hand-trip __type="u16">114</hand-trip>
+          <one-hand __type="u16">125</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">196</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>さもえんぬん</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7725</max_exscore>
+        <radar>
+          <notes __type="u16">118</notes>
+          <peak __type="u16">167</peak>
+          <tsumami __type="u16">76</tsumami>
+          <tricky __type="u16">92</tricky>
+          <hand-trip __type="u16">187</hand-trip>
+          <one-hand __type="u16">134</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2398">
+    <info>
+      <title_name>断罪のミメシス</title_name>
+      <title_yomigana>ﾀﾞﾝｻﾞｲﾉﾐﾒｼｽ</title_yomigana>
+      <artist_name>KE!JU</artist_name>
+      <artist_yomigana>ｹｲｼﾞｭ</artist_yomigana>
+      <ascii>danzainomimesis_keiju</ascii>
+      <bpm_max __type="u32">25000</bpm_max>
+      <bpm_min __type="u32">25000</bpm_min>
+      <distribution_date __type="u32">20260618</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">15</bg_no>
+      <genre __type="u32">16</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>ReboundeR</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2835</max_exscore>
+        <radar>
+          <notes __type="u16">24</notes>
+          <peak __type="u16">38</peak>
+          <tsumami __type="u16">44</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>ReboundeR</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4479</max_exscore>
+        <radar>
+          <notes __type="u16">66</notes>
+          <peak __type="u16">70</peak>
+          <tsumami __type="u16">33</tsumami>
+          <tricky __type="u16">50</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">41</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">170</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>ReboundeR</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6732</max_exscore>
+        <radar>
+          <notes __type="u16">97</notes>
+          <peak __type="u16">114</peak>
+          <tsumami __type="u16">52</tsumami>
+          <tricky __type="u16">65</tricky>
+          <hand-trip __type="u16">38</hand-trip>
+          <one-hand __type="u16">86</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">196</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>ReboundeR</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">8615</max_exscore>
+        <radar>
+          <notes __type="u16">140</notes>
+          <peak __type="u16">136</peak>
+          <tsumami __type="u16">58</tsumami>
+          <tricky __type="u16">60</tricky>
+          <hand-trip __type="u16">102</hand-trip>
+          <one-hand __type="u16">93</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2399">
+    <info>
+      <title_name>Smintheus</title_name>
+      <title_yomigana>ｽﾐﾝﾃｳｽ</title_yomigana>
+      <artist_name>TAN1CHU</artist_name>
+      <artist_yomigana>ﾀﾆﾁｭｳ</artist_yomigana>
+      <ascii>smintheus_tan1chu</ascii>
+      <bpm_max __type="u32">25000</bpm_max>
+      <bpm_min __type="u32">22800</bpm_min>
+      <distribution_date __type="u32">20260618</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">2</bg_no>
+      <genre __type="u32">16</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>tokky</illustrator>
+        <effected_by>T=I=NAKA</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2372</max_exscore>
+        <radar>
+          <notes __type="u16">28</notes>
+          <peak __type="u16">37</peak>
+          <tsumami __type="u16">26</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>tokky</illustrator>
+        <effected_by>T=I=NAKA</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4750</max_exscore>
+        <radar>
+          <notes __type="u16">65</notes>
+          <peak __type="u16">75</peak>
+          <tsumami __type="u16">49</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">32</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">170</difnum>
+        <illustrator>tokky</illustrator>
+        <effected_by>T=I=NAKA</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7284</max_exscore>
+        <radar>
+          <notes __type="u16">106</notes>
+          <peak __type="u16">125</peak>
+          <tsumami __type="u16">58</tsumami>
+          <tricky __type="u16">47</tricky>
+          <hand-trip __type="u16">20</hand-trip>
+          <one-hand __type="u16">66</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">195</difnum>
+        <illustrator>tokky</illustrator>
+        <effected_by>ハムCHU (supervised by T=I=NAKA)</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">9641</max_exscore>
+        <radar>
+          <notes __type="u16">140</notes>
+          <peak __type="u16">182</peak>
+          <tsumami __type="u16">76</tsumami>
+          <tricky __type="u16">68</tricky>
+          <hand-trip __type="u16">84</hand-trip>
+          <one-hand __type="u16">98</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2400">
+    <info>
+      <title_name>Any％</title_name>
+      <title_yomigana>ｴﾆｰﾊﾟｰｾﾝﾄ</title_yomigana>
+      <artist_name>めめめ</artist_name>
+      <artist_yomigana>ﾒﾒﾒ</artist_yomigana>
+      <ascii>anypercent_mememe</ascii>
+      <bpm_max __type="u32">17700</bpm_max>
+      <bpm_min __type="u32">15700</bpm_min>
+      <distribution_date __type="u32">20260618</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">58</bg_no>
+      <genre __type="u32">16</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>SHIROTSUKI</illustrator>
+        <effected_by>七色Method Any％</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1980</max_exscore>
+        <radar>
+          <notes __type="u16">19</notes>
+          <peak __type="u16">37</peak>
+          <tsumami __type="u16">51</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>SHIROTSUKI</illustrator>
+        <effected_by>七色Method Any％ NMG</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3197</max_exscore>
+        <radar>
+          <notes __type="u16">45</notes>
+          <peak __type="u16">58</peak>
+          <tsumami __type="u16">40</tsumami>
+          <tricky __type="u16">14</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">48</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">170</difnum>
+        <illustrator>SHIROTSUKI</illustrator>
+        <effected_by>七色Method Any％ OOB</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5367</max_exscore>
+        <radar>
+          <notes __type="u16">102</notes>
+          <peak __type="u16">125</peak>
+          <tsumami __type="u16">37</tsumami>
+          <tricky __type="u16">54</tricky>
+          <hand-trip __type="u16">14</hand-trip>
+          <one-hand __type="u16">83</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">193</difnum>
+        <illustrator>SHIROTSUKI</illustrator>
+        <effected_by>七色Method Any％ Glitchless</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6890</max_exscore>
+        <radar>
+          <notes __type="u16">130</notes>
+          <peak __type="u16">137</peak>
+          <tsumami __type="u16">57</tsumami>
+          <tricky __type="u16">62</tricky>
+          <hand-trip __type="u16">91</hand-trip>
+          <one-hand __type="u16">121</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2401">
+    <info>
+      <title_name>Lava Flow</title_name>
+      <title_yomigana>ﾗｳﾞｧﾌﾛｰ</title_yomigana>
+      <artist_name>BEMANI Sound Team "S-C-U &amp; SYUNN"</artist_name>
+      <artist_yomigana>ｼｮｯﾁｮｰｱﾝﾄﾞｼｭﾝ</artist_yomigana>
+      <ascii>lavaflow_scusyunn</ascii>
+      <bpm_max __type="u32">19000</bpm_max>
+      <bpm_min __type="u32">19000</bpm_min>
+      <distribution_date __type="u32">20260618</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">60</bg_no>
+      <genre __type="u32">16</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">50</difnum>
+        <illustrator>emoSAPO STAFF</illustrator>
+        <effected_by>山音りょー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1428</max_exscore>
+        <radar>
+          <notes __type="u16">19</notes>
+          <peak __type="u16">25</peak>
+          <tsumami __type="u16">31</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">120</difnum>
+        <illustrator>emoSAPO STAFF</illustrator>
+        <effected_by>山音りょー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2543</max_exscore>
+        <radar>
+          <notes __type="u16">36</notes>
+          <peak __type="u16">52</peak>
+          <tsumami __type="u16">49</tsumami>
+          <tricky __type="u16">9</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">28</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">150</difnum>
+        <illustrator>emoSAPO STAFF</illustrator>
+        <effected_by>山音りょー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3290</max_exscore>
+        <radar>
+          <notes __type="u16">62</notes>
+          <peak __type="u16">82</peak>
+          <tsumami __type="u16">42</tsumami>
+          <tricky __type="u16">31</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">38</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">170</difnum>
+        <illustrator>emoSAPO STAFF</illustrator>
+        <effected_by>山音りょー</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4507</max_exscore>
+        <radar>
+          <notes __type="u16">83</notes>
+          <peak __type="u16">106</peak>
+          <tsumami __type="u16">54</tsumami>
+          <tricky __type="u16">40</tricky>
+          <hand-trip __type="u16">50</hand-trip>
+          <one-hand __type="u16">75</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2402">
+    <info>
+      <title_name>Secret Raid</title_name>
+      <title_yomigana>ｼｰｸﾚｯﾄﾚｲﾄﾞ</title_yomigana>
+      <artist_name>BEMANI Sound Team "Yvya" feat. 吾龍</artist_name>
+      <artist_yomigana>ﾕｳﾔﾌｨｰﾁｬﾘﾝｸﾞｺﾞﾘｭｳ</artist_yomigana>
+      <ascii>secretraid_yvya</ascii>
+      <bpm_max __type="u32">20000</bpm_max>
+      <bpm_min __type="u32">20000</bpm_min>
+      <distribution_date __type="u32">20260618</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">10</bg_no>
+      <genre __type="u32">16</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>5to3</illustrator>
+        <effected_by>Classical Assistant</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2360</max_exscore>
+        <radar>
+          <notes __type="u16">23</notes>
+          <peak __type="u16">32</peak>
+          <tsumami __type="u16">40</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>5to3</illustrator>
+        <effected_by>Classical Assistant</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4068</max_exscore>
+        <radar>
+          <notes __type="u16">55</notes>
+          <peak __type="u16">62</peak>
+          <tsumami __type="u16">32</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">39</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>5to3</illustrator>
+        <effected_by>Classical Assistant</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5732</max_exscore>
+        <radar>
+          <notes __type="u16">94</notes>
+          <peak __type="u16">107</peak>
+          <tsumami __type="u16">41</tsumami>
+          <tricky __type="u16">27</tricky>
+          <hand-trip __type="u16">14</hand-trip>
+          <one-hand __type="u16">82</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">184</difnum>
+        <illustrator>5to3</illustrator>
+        <effected_by>Classical Assistant</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7528</max_exscore>
+        <radar>
+          <notes __type="u16">130</notes>
+          <peak __type="u16">125</peak>
+          <tsumami __type="u16">57</tsumami>
+          <tricky __type="u16">33</tricky>
+          <hand-trip __type="u16">66</hand-trip>
+          <one-hand __type="u16">127</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2403">
+    <info>
+      <title_name>Esperanza</title_name>
+      <title_yomigana>ｴｽﾍﾟﾗﾝｻ</title_yomigana>
+      <artist_name>猫叉劇団</artist_name>
+      <artist_yomigana>ﾈｺﾏﾀｹﾞｷﾀﾞﾝ</artist_yomigana>
+      <ascii>esperanza_nekomatagekidan</ascii>
+      <bpm_max __type="u32">13500</bpm_max>
+      <bpm_min __type="u32">13500</bpm_min>
+      <distribution_date __type="u32">20260618</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">2</bg_no>
+      <genre __type="u32">16</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">50</difnum>
+        <illustrator>ちっひ</illustrator>
+        <effected_by>フラクタルネイション</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1501</max_exscore>
+        <radar>
+          <notes __type="u16">20</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">26</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">120</difnum>
+        <illustrator>ちっひ</illustrator>
+        <effected_by>フラクタルネイション</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2569</max_exscore>
+        <radar>
+          <notes __type="u16">37</notes>
+          <peak __type="u16">50</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">13</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">29</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>ちっひ</illustrator>
+        <effected_by>フラクタルネイション</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4569</max_exscore>
+        <radar>
+          <notes __type="u16">74</notes>
+          <peak __type="u16">75</peak>
+          <tsumami __type="u16">63</tsumami>
+          <tricky __type="u16">23</tricky>
+          <hand-trip __type="u16">2</hand-trip>
+          <one-hand __type="u16">62</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">186</difnum>
+        <illustrator>ちっひ</illustrator>
+        <effected_by>希望のフラクタルネイション</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7380</max_exscore>
+        <radar>
+          <notes __type="u16">153</notes>
+          <peak __type="u16">112</peak>
+          <tsumami __type="u16">60</tsumami>
+          <tricky __type="u16">52</tricky>
+          <hand-trip __type="u16">29</hand-trip>
+          <one-hand __type="u16">76</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2405">
+    <info>
+      <title_name>夢色ワンダー</title_name>
+      <title_yomigana>ﾕﾒｲﾛﾜﾝﾀﾞｰ</title_yomigana>
+      <artist_name>hololive IDOL PROJECT</artist_name>
+      <artist_yomigana>ﾎﾛﾗｲﾌﾞｱｲﾄﾞﾙﾌﾟﾛｼﾞｪｸﾄ</artist_yomigana>
+      <ascii>yumeirowonder_holodreams</ascii>
+      <bpm_max __type="u32">20800</bpm_max>
+      <bpm_min __type="u32">13500</bpm_min>
+      <distribution_date __type="u32">20260827</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">75</bg_no>
+      <genre __type="u32">0</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+      <license_text>隯 COVER</license_text>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">30</difnum>
+        <illustrator>-</illustrator>
+        <effected_by>直垂すもも∂</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1717</max_exscore>
+        <radar>
+          <notes __type="u16">13</notes>
+          <peak __type="u16">20</peak>
+          <tsumami __type="u16">27</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">90</difnum>
+        <illustrator>-</illustrator>
+        <effected_by>直垂すもも∂</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3331</max_exscore>
+        <radar>
+          <notes __type="u16">26</notes>
+          <peak __type="u16">43</peak>
+          <tsumami __type="u16">52</tsumami>
+          <tricky __type="u16">32</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">13</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">130</difnum>
+        <illustrator>-</illustrator>
+        <effected_by>直垂すもも∂</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5446</max_exscore>
+        <radar>
+          <notes __type="u16">51</notes>
+          <peak __type="u16">61</peak>
+          <tsumami __type="u16">50</tsumami>
+          <tricky __type="u16">34</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">41</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">184</difnum>
+        <illustrator>-</illustrator>
+        <effected_by>直垂すもも∂</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">11096</max_exscore>
+        <radar>
+          <notes __type="u16">118</notes>
+          <peak __type="u16">117</peak>
+          <tsumami __type="u16">105</tsumami>
+          <tricky __type="u16">116</tricky>
+          <hand-trip __type="u16">114</hand-trip>
+          <one-hand __type="u16">119</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+  </music>
+  <music id="2406">
+    <info>
+      <title_name>サイハテ</title_name>
+      <title_yomigana>ｻｲﾊﾃ</title_yomigana>
+      <artist_name>NAMV feat. あかつき るき</artist_name>
+      <artist_yomigana>ﾅﾏﾌｨｰﾁｬﾘﾝｸﾞｱｶﾂｷﾙｷ</artist_yomigana>
+      <ascii>saihate_namv</ascii>
+      <bpm_max __type="u32">22200</bpm_max>
+      <bpm_min __type="u32">22200</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">120</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">80</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>conceptual explorer as ぇっゃ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2631</max_exscore>
+        <radar>
+          <notes __type="u16">33</notes>
+          <peak __type="u16">40</peak>
+          <tsumami __type="u16">34</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">5</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">150</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>conceptual explorer as ぇっゃ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5312</max_exscore>
+        <radar>
+          <notes __type="u16">82</notes>
+          <peak __type="u16">107</peak>
+          <tsumami __type="u16">44</tsumami>
+          <tricky __type="u16">33</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">42</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">184</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>conceptual explorer as ぇっゃ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">8137</max_exscore>
+        <radar>
+          <notes __type="u16">140</notes>
+          <peak __type="u16">131</peak>
+          <tsumami __type="u16">55</tsumami>
+          <tricky __type="u16">61</tricky>
+          <hand-trip __type="u16">27</hand-trip>
+          <one-hand __type="u16">87</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">205</difnum>
+        <illustrator>スティンガー</illustrator>
+        <effected_by>conceptual explorer as ぇっゃ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">10176</max_exscore>
+        <radar>
+          <notes __type="u16">165</notes>
+          <peak __type="u16">150</peak>
+          <tsumami __type="u16">78</tsumami>
+          <tricky __type="u16">106</tricky>
+          <hand-trip __type="u16">114</hand-trip>
+          <one-hand __type="u16">109</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2407">
+    <info>
+      <title_name>覚帝神刻</title_name>
+      <title_yomigana>ｶｸﾃｲｼﾝｺｸ</title_yomigana>
+      <artist_name>technoplanet feat. 木下珠子</artist_name>
+      <artist_yomigana>ﾃｸﾉﾌﾟﾗﾈｯﾄﾌｨｰﾁｬﾘﾝｸﾞｷﾉｼﾀﾀﾏｺ</artist_yomigana>
+      <ascii>kakuteishinkoku_technoplanet</ascii>
+      <bpm_max __type="u32">24000</bpm_max>
+      <bpm_min __type="u32">24000</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">122</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>Minoru</illustrator>
+        <effected_by>Akizuki Nagomu</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2928</max_exscore>
+        <radar>
+          <notes __type="u16">20</notes>
+          <peak __type="u16">39</peak>
+          <tsumami __type="u16">51</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>Minoru</illustrator>
+        <effected_by>Akizuki Nagomu</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5247</max_exscore>
+        <radar>
+          <notes __type="u16">63</notes>
+          <peak __type="u16">71</peak>
+          <tsumami __type="u16">61</tsumami>
+          <tricky __type="u16">7</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">62</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">181</difnum>
+        <illustrator>Minoru</illustrator>
+        <effected_by>Akizuki Nagomu</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">8385</max_exscore>
+        <radar>
+          <notes __type="u16">109</notes>
+          <peak __type="u16">131</peak>
+          <tsumami __type="u16">62</tsumami>
+          <tricky __type="u16">57</tricky>
+          <hand-trip __type="u16">55</hand-trip>
+          <one-hand __type="u16">88</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">198</difnum>
+        <illustrator>Minoru</illustrator>
+        <effected_by>Akizuki Nagomu feat. Dott. Velocissimo</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">9679</max_exscore>
+        <radar>
+          <notes __type="u16">154</notes>
+          <peak __type="u16">167</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">200</tricky>
+          <hand-trip __type="u16">64</hand-trip>
+          <one-hand __type="u16">84</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2408">
+    <info>
+      <title_name>Sci-Φ-nder</title_name>
+      <title_yomigana>ｻｲﾌｧｲﾝﾀﾞｰ</title_yomigana>
+      <artist_name>庭師</artist_name>
+      <artist_yomigana>ﾆﾜｼ</artist_yomigana>
+      <ascii>scifinder_niwashi</ascii>
+      <bpm_max __type="u32">20600</bpm_max>
+      <bpm_min __type="u32">20600</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">122</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>鋼のビスカッチャ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2394</max_exscore>
+        <radar>
+          <notes __type="u16">21</notes>
+          <peak __type="u16">37</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>鋼のビスカッチャ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4508</max_exscore>
+        <radar>
+          <notes __type="u16">75</notes>
+          <peak __type="u16">81</peak>
+          <tsumami __type="u16">42</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">53</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">175</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>鋼のビスカッチャ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5971</max_exscore>
+        <radar>
+          <notes __type="u16">117</notes>
+          <peak __type="u16">112</peak>
+          <tsumami __type="u16">41</tsumami>
+          <tricky __type="u16">30</tricky>
+          <hand-trip __type="u16">7</hand-trip>
+          <one-hand __type="u16">48</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">196</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>鋼のビスカッチャ</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">8678</max_exscore>
+        <radar>
+          <notes __type="u16">184</notes>
+          <peak __type="u16">164</peak>
+          <tsumami __type="u16">41</tsumami>
+          <tricky __type="u16">141</tricky>
+          <hand-trip __type="u16">43</hand-trip>
+          <one-hand __type="u16">90</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2409">
+    <info>
+      <title_name>Raise the flag of victory!</title_name>
+      <title_yomigana>ﾚｲｽﾞｻﾞﾌﾗｯｸﾞｵﾌﾞｳﾞｨｸﾄﾘｰ</title_yomigana>
+      <artist_name>ke-ji</artist_name>
+      <artist_yomigana>ｹｰｼﾞ</artist_yomigana>
+      <ascii>raisetheflagvictory_keji</ascii>
+      <bpm_max __type="u32">19800</bpm_max>
+      <bpm_min __type="u32">17000</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">122</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">70</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>apple kong</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2366</max_exscore>
+        <radar>
+          <notes __type="u16">24</notes>
+          <peak __type="u16">43</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">13</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">140</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>apple kong</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3771</max_exscore>
+        <radar>
+          <notes __type="u16">48</notes>
+          <peak __type="u16">68</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">53</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">23</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">170</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>apple kong</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5295</max_exscore>
+        <radar>
+          <notes __type="u16">89</notes>
+          <peak __type="u16">106</peak>
+          <tsumami __type="u16">38</tsumami>
+          <tricky __type="u16">39</tricky>
+          <hand-trip __type="u16">40</hand-trip>
+          <one-hand __type="u16">46</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">195</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>apple kong</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7071</max_exscore>
+        <radar>
+          <notes __type="u16">133</notes>
+          <peak __type="u16">159</peak>
+          <tsumami __type="u16">47</tsumami>
+          <tricky __type="u16">64</tricky>
+          <hand-trip __type="u16">129</hand-trip>
+          <one-hand __type="u16">119</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2410">
+    <info>
+      <title_name>Sakura Eyelen</title_name>
+      <title_yomigana>ｻｸﾗｱｲﾚﾝ</title_yomigana>
+      <artist_name>あまみ×ひなみ</artist_name>
+      <artist_yomigana>ｱﾏﾐﾋﾅﾐ</artist_yomigana>
+      <ascii>sakuraeyelen_amamihinami</ascii>
+      <bpm_max __type="u32">20500</bpm_max>
+      <bpm_min __type="u32">20500</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">122</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>七色Method</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1753</max_exscore>
+        <radar>
+          <notes __type="u16">31</notes>
+          <peak __type="u16">31</peak>
+          <tsumami __type="u16">10</tsumami>
+          <tricky __type="u16">1</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>七色Method</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3590</max_exscore>
+        <radar>
+          <notes __type="u16">60</notes>
+          <peak __type="u16">57</peak>
+          <tsumami __type="u16">35</tsumami>
+          <tricky __type="u16">22</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">35</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>七色Method</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4799</max_exscore>
+        <radar>
+          <notes __type="u16">88</notes>
+          <peak __type="u16">87</peak>
+          <tsumami __type="u16">37</tsumami>
+          <tricky __type="u16">38</tricky>
+          <hand-trip __type="u16">2</hand-trip>
+          <one-hand __type="u16">53</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">184</difnum>
+        <illustrator>BLU</illustrator>
+        <effected_by>七色Method</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6823</max_exscore>
+        <radar>
+          <notes __type="u16">140</notes>
+          <peak __type="u16">121</peak>
+          <tsumami __type="u16">45</tsumami>
+          <tricky __type="u16">66</tricky>
+          <hand-trip __type="u16">37</hand-trip>
+          <one-hand __type="u16">81</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2411">
+    <info>
+      <title_name>VIIIΧ</title_name>
+      <title_yomigana>ﾊｶｲ</title_yomigana>
+      <artist_name>Tanchiky</artist_name>
+      <artist_yomigana>ﾀﾝﾁｷ</artist_yomigana>
+      <ascii>viiix_tanchiky</ascii>
+      <bpm_max __type="u32">20100</bpm_max>
+      <bpm_min __type="u32">20100</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">122</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">2011</max_exscore>
+        <radar>
+          <notes __type="u16">26</notes>
+          <peak __type="u16">35</peak>
+          <tsumami __type="u16">37</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3918</max_exscore>
+        <radar>
+          <notes __type="u16">60</notes>
+          <peak __type="u16">62</peak>
+          <tsumami __type="u16">39</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">50</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5138</max_exscore>
+        <radar>
+          <notes __type="u16">91</notes>
+          <peak __type="u16">106</peak>
+          <tsumami __type="u16">48</tsumami>
+          <tricky __type="u16">19</tricky>
+          <hand-trip __type="u16">8</hand-trip>
+          <one-hand __type="u16">65</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">185</difnum>
+        <illustrator>まゆずみ</illustrator>
+        <effected_by>トトリオン軍団</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">6836</max_exscore>
+        <radar>
+          <notes __type="u16">132</notes>
+          <peak __type="u16">112</peak>
+          <tsumami __type="u16">53</tsumami>
+          <tricky __type="u16">27</tricky>
+          <hand-trip __type="u16">63</hand-trip>
+          <one-hand __type="u16">113</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2412">
+    <info>
+      <title_name>Stellar Pilgrim</title_name>
+      <title_yomigana>ｽﾃﾗﾋﾟﾙｸﾞﾘﾑ</title_yomigana>
+      <artist_name>テヅカ</artist_name>
+      <artist_yomigana>ﾃﾂﾞｶ</artist_yomigana>
+      <ascii>stellarpilgrim_tezuka</ascii>
+      <bpm_max __type="u32">19400</bpm_max>
+      <bpm_min __type="u32">19400</bpm_min>
+      <distribution_date __type="u32">20260806</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">122</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">60</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>fractal-shoot!! MODE:VOLTENIZER</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">1986</max_exscore>
+        <radar>
+          <notes __type="u16">27</notes>
+          <peak __type="u16">33</peak>
+          <tsumami __type="u16">26</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">0</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">130</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>fractal-shoot!! MODE:VOLTENIZER</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">3577</max_exscore>
+        <radar>
+          <notes __type="u16">52</notes>
+          <peak __type="u16">66</peak>
+          <tsumami __type="u16">45</tsumami>
+          <tricky __type="u16">0</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">32</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">160</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>fractal-shoot!! MODE:VOLTENIZER</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">5344</max_exscore>
+        <radar>
+          <notes __type="u16">88</notes>
+          <peak __type="u16">107</peak>
+          <tsumami __type="u16">42</tsumami>
+          <tricky __type="u16">33</tricky>
+          <hand-trip __type="u16">4</hand-trip>
+          <one-hand __type="u16">69</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">186</difnum>
+        <illustrator>C4N!</illustrator>
+        <effected_by>fractal-shoot!! MODE:VOLTENIZER</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">8211</max_exscore>
+        <radar>
+          <notes __type="u16">151</notes>
+          <peak __type="u16">133</peak>
+          <tsumami __type="u16">52</tsumami>
+          <tricky __type="u16">53</tricky>
+          <hand-trip __type="u16">45</hand-trip>
+          <one-hand __type="u16">98</one-hand>
+        </radar>
+      </maximum>
+    </difficulty>
+    <tag id="45"/>
+  </music>
+  <music id="2414">
+    <info>
+      <title_name>KAC PERFECT ULTIMATE CHRONICLE -Lord of the SOUND VOLTEX-</title_name>
+      <title_yomigana>ｹｰｴｰｼｰﾊﾟｰﾌｪｸﾄｱﾙﾃｨﾒｯﾄｸﾛﾆｸﾙﾛｰﾄﾞｵﾌﾞｻﾞｻｳﾝﾄﾞﾎﾞﾙﾃｯｸｽ</title_yomigana>
+      <artist_name>FLOOR LEGENDS -KAC-</artist_name>
+      <artist_yomigana>ﾌﾛｱｰﾚｼﾞｪﾝｽﾞｹｰｴｰｼｰ</artist_yomigana>
+      <ascii>kacchronicle_floorlegends</ascii>
+      <bpm_max __type="u32">66600</bpm_max>
+      <bpm_min __type="u32">16400</bpm_min>
+      <distribution_date __type="u32">20260820</distribution_date>
+      <volume __type="u16">91</volume>
+      <bg_no __type="u16">121</bg_no>
+      <genre __type="u32">2</genre>
+      <is_fixed __type="u8">1</is_fixed>
+      <version __type="u8">7</version>
+      <demo_pri __type="s8">-2</demo_pri>
+      <inf_ver __type="u8">0</inf_ver>
+    </info>
+    <difficulty>
+      <novice>
+        <difnum __type="u8">80</difnum>
+        <illustrator>ましましやさい</illustrator>
+        <effected_by>SOUND VOLTEX Effectors</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">4255</max_exscore>
+        <radar>
+          <notes __type="u16">20</notes>
+          <peak __type="u16">62</peak>
+          <tsumami __type="u16">77</tsumami>
+          <tricky __type="u16">53</tricky>
+          <hand-trip __type="u16">0</hand-trip>
+          <one-hand __type="u16">15</one-hand>
+        </radar>
+      </novice>
+      <advanced>
+        <difnum __type="u8">150</difnum>
+        <illustrator>ましましやさい</illustrator>
+        <effected_by>SOUND VOLTEX Effectors</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">7082</max_exscore>
+        <radar>
+          <notes __type="u16">58</notes>
+          <peak __type="u16">96</peak>
+          <tsumami __type="u16">83</tsumami>
+          <tricky __type="u16">70</tricky>
+          <hand-trip __type="u16">12</hand-trip>
+          <one-hand __type="u16">52</one-hand>
+        </radar>
+      </advanced>
+      <exhaust>
+        <difnum __type="u8">187</difnum>
+        <illustrator>ましましやさい</illustrator>
+        <effected_by>SOUND VOLTEX Effectors</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">11112</max_exscore>
+        <radar>
+          <notes __type="u16">106</notes>
+          <peak __type="u16">137</peak>
+          <tsumami __type="u16">107</tsumami>
+          <tricky __type="u16">69</tricky>
+          <hand-trip __type="u16">43</hand-trip>
+          <one-hand __type="u16">67</one-hand>
+        </radar>
+      </exhaust>
+      <maximum>
+        <difnum __type="u8">208</difnum>
+        <illustrator>ましましやさい</illustrator>
+        <effected_by>SOUND VOLTEX Effectors</effected_by>
+        <price __type="s32">-1</price>
+        <limited __type="u8">1</limited>
+        <jacket_print __type="s32">-2</jacket_print>
+        <jacket_mask __type="s32">0</jacket_mask>
+        <max_exscore __type="s32">15539</max_exscore>
+        <radar>
+          <notes __type="u16">143</notes>
+          <peak __type="u16">175</peak>
+          <tsumami __type="u16">154</tsumami>
+          <tricky __type="u16">71</tricky>
+          <hand-trip __type="u16">74</hand-trip>
+          <one-hand __type="u16">101</one-hand>
         </radar>
       </maximum>
     </difficulty>
