@@ -1,10 +1,8 @@
 """Flask backend – exposes POST /api/generate-b50 → PNG image."""
 
-import threading
-
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-from generate import generate_b50_image, prefetch_jackets
+from generate import generate_b50_image
 from io import BytesIO
 
 app = Flask(__name__)
@@ -12,7 +10,6 @@ CORS(app)          # allow requests from the Vite dev server
 
 # Runs on import so it also fires under gunicorn (server:app), where
 # __name__ != "__main__" and the block below never executes.
-threading.Thread(target=prefetch_jackets, kwargs={"start": 1, "end": 3000}, daemon=True).start()
 
 @app.route("/health", methods=["GET"])
 def health():
