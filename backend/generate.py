@@ -5,7 +5,7 @@ import functools
 import numpy as np
 import requests
 from concurrent.futures import ThreadPoolExecutor
-from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance, ImageFilter, ImageOps
 from io import BytesIO
 from datetime import datetime, timezone
 
@@ -34,14 +34,16 @@ GOLD      = (242, 242, 242)
 COLOR_SCHEMES = {
     "nabla": {
         "bg_top":    (3, 16, 7),      # near-black green, top-left
-        "bg_bottom": (11, 63, 18),    # rich, saturated green, bottom-right
+        "bg_bottom": (11, 30, 18),    # rich, saturated green, bottom-right
         "card_tint": (190, 255, 200), # soft mint-green card highlight
+        "art":       "jk_dummy_b_nbl.png",
         "label":     "NABLA VF B50",
     },
     "exceed": {
         "bg_top":    (12, 13, 15),    # near-black gray, top-left
-        "bg_bottom": (58, 60, 65),    # lighter slate gray, bottom-right
+        "bg_bottom": (29, 30, 32),    # lighter slate gray, bottom-right
         "card_tint": (225, 228, 232), # soft cool-white card highlight
+        "art":       "jk_dummy_b_eg.png",
         "label":     "EXCEED GEAR VF B50",
     },
 }
@@ -219,6 +221,34 @@ def _background_gradient(width, height, bg_top, bg_bottom):
     return Image.fromarray(arr.astype(np.uint8), mode="RGB")
 
 
+@functools.lru_cache(maxsize=2)
+def _bg_art_alpha(name, width, height):
+    try:
+        src = Image.open(os.path.join(_DIR, "asset", name)).convert("L")
+    except OSError:
+        return None
+
+    canvas = ImageOps.fit(src, (width, height), Image.LANCZOS).filter(ImageFilter.GaussianBlur(9))
+
+    art_h = round(src.height * width / src.width)
+    top   = (height - art_h) // 2
+    sharp = Image.new("L", (width, height), 0)
+    sharp.paste(src.resize((width, art_h), Image.LANCZOS), (0, top))
+    mask  = Image.new("L", (width, height), 0)
+    ImageDraw.Draw(mask).rectangle([0, top, width, top + art_h - 1], fill=255)
+    canvas = Image.composite(sharp, canvas, mask.filter(ImageFilter.GaussianBlur(20)))
+
+    # dim it so card text stays legible; gamma 0.6 keeps the faint grid visible
+    return canvas.point([round(97 * (v / 255) ** 0.6) for v in range(256)])
+
+
+def _apply_background_art(img, name):
+    alpha = _bg_art_alpha(name, img.width, img.height)
+    if alpha is None:
+        return img
+    return Image.composite(ImageEnhance.Brightness(img).enhance(6), img, alpha)
+
+
 @functools.lru_cache(maxsize=4)
 def _card_gradient_overlay(tint):
     """Subtle tinted gradient, transparent at top fading in toward the bottom of a card."""
@@ -370,6 +400,7 @@ def generate_b50_image(data: dict) -> Image.Image:
     scheme = COLOR_SCHEMES.get(mode, COLOR_SCHEMES["nabla"])
 
     img  = _background_gradient(IMAGE_WIDTH, IMAGE_HEIGHT, scheme["bg_top"], scheme["bg_bottom"])
+    img  = _apply_background_art(img, scheme["art"])
     draw = ImageDraw.Draw(img)
 
     def _slot_xy(col, row):
